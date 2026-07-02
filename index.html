@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Image to prompt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f6f3;
+    --ink:#16161a;
+    --ink-soft:#5d5d68;
+    --accent:#5b6cff;
+    --line:#e6e4df;
+    --maxw:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.5;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* compact header so screen 1 + part of screen 2 are visible at a glance */
+  header{padding:24px 0 4px;text-align:center}
+  .kicker{
+    font-weight:600;font-size:12.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent)
+  }
+  h1{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(24px,3.6vw,34px);line-height:1.05;letter-spacing:-.02em;margin:6px 0 0
+  }
+  .sub{margin:7px auto 0;max-width:540px;color:var(--ink-soft);font-size:15px}
+
+  .step{margin:18px 0 0}
+  .step-label{display:flex;align-items:center;gap:11px;margin:0 0 10px}
+  .step-num{
+    flex:none;width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;
+    font-family:"Bricolage Grotesque";font-weight:700;font-size:16px;
+    display:flex;align-items:center;justify-content:center
+  }
+  .step-label h2{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(18px,2.6vw,24px);letter-spacing:-.01em
+  }
+  .shot{
+    position:relative;width:fit-content;max-width:100%;margin:0 auto;
+    border-radius:14px;overflow:hidden;border:1px solid var(--line);
+    background:#fff;box-shadow:0 24px 50px -28px rgba(20,20,40,.35)
+  }
+  .shot img{display:block;width:auto;max-width:100%;max-height:58vh;height:auto}
+  .shot svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+  /* numbered captions live under the screenshot — nothing overlaps the UI */
+  .legend{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;
+    margin:13px auto 0;max-width:760px
+  }
+  .legend li{list-style:none;display:flex;align-items:center;gap:9px;font-size:15.5px}
+  .legend .n{
+    flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;
+    font-family:"Bricolage Grotesque";font-weight:700;font-size:13px;
+    display:flex;align-items:center;justify-content:center
+  }
+  .legend .frm{
+    flex:none;width:22px;height:22px;border-radius:6px;
+    border:3px solid var(--accent);background:transparent
+  }
+
+  footer{padding:30px 0 56px;text-align:center;color:var(--ink-soft);font-size:15px}
+  footer b{color:var(--ink)}
+  footer .arrow{color:var(--accent);font-weight:700;margin:0 5px}
+  footer .sig{margin-top:9px;font-size:13px;opacity:.7}
+
+  @media(max-width:640px){ .shot img{max-height:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Installed · almost ready</div>
+    <h1>Welcome to Image&nbsp;to&nbsp;prompt</h1>
+    <p class="sub">Two quick steps and you're set — just follow the arrows.</p>
+  </header>
+
+  <!-- STEP 1 : pin -->
+  <section class="step">
+    <div class="step-label"><span class="step-num">1</span><h2>Pin it to your toolbar</h2></div>
+    <div class="shot">
+      <img src="shot1-pin.png" alt="Chrome with the extensions menu open and the pin button next to Image to prompt" width="2934" height="1822">
+      <svg viewBox="0 0 2934 1822" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ar1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5b6cff"/>
+          </marker>
+        </defs>
+
+        <!-- badge 1 -> puzzle icon (short arrow, target circled) -->
+        <circle cx="1911" cy="300" r="66" fill="#5b6cff"/>
+        <text x="1911" y="330" font-family="'Bricolage Grotesque',sans-serif" font-size="84" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+        <path d="M1990 300 C2250 248, 2470 190, 2630 160" fill="none" stroke="#5b6cff" stroke-width="14" stroke-linecap="round" marker-end="url(#ar1)"/>
+        <!-- tight ring around the puzzle icon only (separator at x2760, dropdown top at y~157 stay clear) -->
+        <circle cx="2708" cy="121" r="44" fill="none" stroke="#5b6cff" stroke-width="10"/>
+
+        <!-- badge 2 -> pin button (badge sits below the menu, arrow points straight up — clear of the extension name and icon) -->
+        <circle cx="2571" cy="730" r="66" fill="#5b6cff"/>
+        <text x="2571" y="760" font-family="'Bricolage Grotesque',sans-serif" font-size="84" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+        <path d="M2571 648 L2571 515" fill="none" stroke="#5b6cff" stroke-width="14" stroke-linecap="round" marker-end="url(#ar1)"/>
+        <!-- tight ring around the pin button ('Pin' tooltip at x2609+ y500+ and menu dots at x2645+ stay clear) -->
+        <circle cx="2570" cy="432" r="52" fill="none" stroke="#5b6cff" stroke-width="10"/>
+      </svg>
+    </div>
+    <ul class="legend">
+      <li><span class="n">1</span>Click the puzzle icon in the toolbar</li>
+      <li><span class="n">2</span>Hit the pin next to &#8220;Image to prompt&#8221;</li>
+    </ul>
+  </section>
+
+  <!-- STEP 2 : open -->
+  <section class="step">
+    <div class="step-label"><span class="step-num">2</span><h2>Click the icon — your panel opens</h2></div>
+    <div class="shot">
+      <img src="shot2-open.png" alt="The pinned Image to prompt icon in the toolbar with its panel open on the right" width="2940" height="1834">
+      <svg viewBox="0 0 2940 1834" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ar2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5b6cff"/>
+          </marker>
+        </defs>
+
+        <!-- badge 3 -> pinned icon (badge sits over the empty end of the address bar, short horizontal arrow — clear of the extension icon and name) -->
+        <circle cx="2280" cy="131" r="66" fill="#5b6cff"/>
+        <text x="2280" y="161" font-family="'Bricolage Grotesque',sans-serif" font-size="84" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+        <path d="M2358 131 L2490 131" fill="none" stroke="#5b6cff" stroke-width="14" stroke-linecap="round" marker-end="url(#ar2)"/>
+        <!-- tight ring: only the extension icon, puzzle icon (left edge ~x2625) stays outside -->
+        <circle cx="2566" cy="131" r="46" fill="none" stroke="#5b6cff" stroke-width="10"/>
+
+        <!-- frame outlining the panel work area (measured panel bounds: x 2030-2921, y 326-1824) -->
+        <rect x="2030" y="326" width="891" height="1498" rx="18" fill="none"
+              stroke="#5b6cff" stroke-width="10"/>
+      </svg>
+    </div>
+    <ul class="legend">
+      <li><span class="n">3</span>Click the pinned icon to open the panel</li>
+      <li><span class="frm"></span>The framed area is your panel — ready to use</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>From now on: <b>right-click any image</b><span class="arrow">&rarr;</span><b>Get AI prompt</b><span class="arrow">&rarr;</span><b>copy the words</b>.</div>
+    <div class="sig">Image to prompt · thanks for installing 💛</div>
+  </footer>
+
+</div>
+</body>
+</html>
