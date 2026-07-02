@@ -20,13 +20,45 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+      # actions/deploy-pages caps its wait at 10 min and CANCELS the queued
+      # deployment on timeout; this org's Pages queue drains slower than that,
+      # so we create the deployment ourselves and wait up to 60 min without
+      # ever canceling.
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/github-script@v7
         with:
-          timeout: 1800000
+          script: |
+            const idToken = await core.getIDToken();
+            const { owner, repo } = context.repo;
+            const arts = await github.rest.actions.listWorkflowRunArtifacts({
+              owner, repo, run_id: context.runId });
+            const art = arts.data.artifacts.find(a => a.name === 'github-pages');
+            if (!art) { core.setFailed('github-pages artifact not found'); return; }
+            const dep = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
+              owner, repo,
+              artifact_id: art.id,
+              pages_build_version: context.sha,
+              oidc_token: idToken });
+            const depId = dep.data.id;
+            core.info(`Deployment created: ${depId}`);
+            core.setOutput('page_url', dep.data.page_url || '');
+            const bad = ['deployment_failed','deployment_content_failed',
+                         'deployment_cancelled','deployment_lost'];
+            for (let i = 0; i < 360; i++) {
+              await new Promise(r => setTimeout(r, 10000));
+              const st = await github.request(
+                'GET /repos/{owner}/{repo}/pages/deployments/{depId}',
+                { owner, repo, depId });
+              const s = st.data.status;
+              if (i % 6 === 0 || s !== 'deployment_queued') core.info(`status: ${s}`);
+              if (s === 'succeed') { core.info('Deployed!'); return; }
+              if (bad.includes(s)) { core.setFailed(`Deployment ${s}`); return; }
+            }
+            core.setFailed('Not finished after 60 min (deployment left running, not canceled)');
