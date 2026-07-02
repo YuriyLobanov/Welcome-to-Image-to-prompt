@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c1c24">
 <title>Image to Prompt — turn any image into an AI prompt</title>
 <meta name="description" content="Image to Prompt is a Chrome extension that turns any picture into a ready-to-use AI prompt. Right-click an image, get the words, copy them. Free, no sign-up.">
 <link rel="icon" type="image/png" href="icon128.png">
@@ -152,10 +153,52 @@
   .foot .right{margin-left:auto}
   .heart{color:var(--accent)}
 
+  /* ---------- tablet: stack hero, keep nav ---------- */
   @media(max-width:880px){
-    .hero{grid-template-columns:1fr;gap:44px;padding:34px 0 56px}
+    .hero{grid-template-columns:1fr;gap:46px;padding:36px 0 56px}
     .panel{margin:0 auto}
+    .sub{max-width:54ch}
+  }
+
+  /* ---------- phone: centered hero, full-width CTA ---------- */
+  @media(max-width:560px){
+    .wrap{padding:0 18px}
+    header{padding:14px 0}
+    .bar{gap:14px}
+    .brand img{width:26px;height:26px}
+    .brand b{font-size:15.5px}
     nav{display:none}
+    .btn.sm{padding:8px 11px;font-size:12px;gap:6px}
+    .btn.sm .soon{font-size:9px;padding:2px 6px}
+    .btn.sm .xt{display:none}
+
+    .hero{gap:38px;padding:26px 0 44px;text-align:center}
+    h1{font-size:clamp(31px,9vw,38px);letter-spacing:-.4px}
+    .sub{margin:14px auto 0}
+    .cta-row{flex-direction:column;gap:12px;margin-top:24px}
+    .cta-row .btn.lg{width:100%;max-width:340px;padding:16px 20px}
+    .trust{justify-content:center;gap:12px 18px;margin-top:22px}
+
+    .panel{width:100%;max-width:340px}
+    .thumb{height:136px}
+    .menu-chip{right:10px;font-size:11.5px;padding:6px 10px 6px 9px}
+    .cursor-mac{width:30px;height:30px;right:0}
+
+    footer{padding:18px 0 22px}
+    .foot{flex-direction:column;gap:7px;text-align:center}
+    .foot .dot{display:none}
+    .foot .right{margin:0}
+  }
+
+  /* very narrow phones */
+  @media(max-width:360px){
+    h1{font-size:29px}
+    .trust{font-size:12.5px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .hero-copy > *,.stage,.pl{animation:none;opacity:1;transform:none}
+    .caret{animation:none}
   }
 </style>
 </head>
@@ -169,7 +212,7 @@
     </a>
     <nav><a href="/welcome/">How to use</a></nav>
     <span class="btn primary sm disabled" role="button" aria-disabled="true" title="The extension is being reviewed by the Chrome Web Store">
-      Install the extension <span class="soon">soon</span>
+      Install<span class="xt">&nbsp;the extension</span> <span class="soon">soon</span>
     </span>
   </div>
 </header>
