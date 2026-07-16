@@ -65,15 +65,17 @@
   /* buttons — same DNA as the extension's .btn */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
        border-radius:var(--r);font-weight:700;font-family:inherit;border:none;
-       text-decoration:none;white-space:nowrap}
-  .btn.primary{background:var(--accent);color:#fff}
+       text-decoration:none;white-space:nowrap;cursor:pointer;
+       transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s ease, background .18s ease}
+  .btn.primary{background:linear-gradient(180deg,#7d99ff,var(--accent));color:#fff;
+               box-shadow:0 6px 18px rgba(108,140,255,.30), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn.primary:hover{transform:translateY(-2px);
+               box-shadow:0 10px 26px rgba(108,140,255,.45), inset 0 1px 0 rgba(255,255,255,.18);
+               background:linear-gradient(180deg,#8aa4ff,#7791ff)}
+  .btn.primary:active{transform:translateY(0);box-shadow:0 4px 12px rgba(108,140,255,.30)}
   .btn.sm{padding:9px 16px;font-size:13.5px}
   .btn.lg{padding:15px 28px;font-size:16px}
-  /* pre-launch: buttons render but do not click */
-  .btn.disabled{cursor:default;background:linear-gradient(0deg,rgba(19,19,26,.35),rgba(19,19,26,.35)),var(--accent);
-                color:rgba(255,255,255,.82);pointer-events:none;user-select:none}
-  .soon{font-size:10.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
-        background:rgba(255,255,255,.16);border-radius:99px;padding:2.5px 8px}
+  .btn .chrome{flex:none;display:block}
 
   /* ---------- hero ---------- */
   .hero{flex:1;display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center;
@@ -166,8 +168,7 @@
     .brand img{width:26px;height:26px}
     .brand b{font-size:15.5px}
     nav{display:none}
-    .btn.sm{padding:8px 11px;font-size:12px;gap:6px}
-    .btn.sm .soon{font-size:9px;padding:2px 6px}
+    .btn.sm{padding:8px 12px;font-size:12px;gap:6px}
     .btn.sm .xt{display:none}
 
     .hero{gap:38px;padding:26px 0 44px;text-align:center}
@@ -209,9 +210,10 @@
       <b>Image to prompt</b>
     </a>
     <nav><a href="/welcome/">How to use</a></nav>
-    <span class="btn primary sm disabled" role="button" aria-disabled="true" title="The extension is being reviewed by the Chrome Web Store">
-      Install<span class="xt">&nbsp;the extension</span> <span class="soon">soon</span>
-    </span>
+    <a class="btn primary sm" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg" target="_blank" rel="noopener">
+      <svg class="chrome" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+      Install<span class="xt">&nbsp;the extension</span>
+    </a>
   </div>
 </header>
 
@@ -221,10 +223,11 @@
     <p class="sub">Right-click a picture, choose <b>Get AI prompt</b> — and get the words that
       recreate it. Paste them into Midjourney, DALL·E, Stable Diffusion or any image generator.</p>
     <div class="cta-row">
-      <span class="btn primary lg disabled" role="button" aria-disabled="true" title="The extension is being reviewed by the Chrome Web Store">
-        Install the extension <span class="soon">soon</span>
-      </span>
-      <span class="cta-note">Coming to the Chrome&nbsp;Web&nbsp;Store</span>
+      <a class="btn primary lg" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg" target="_blank" rel="noopener">
+        <svg class="chrome" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+        Add to Chrome
+      </a>
+      <span class="cta-note">Free on the Chrome&nbsp;Web&nbsp;Store</span>
     </div>
     <div class="trust">
       <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5 5.5 11 12 3.5" stroke="#27c93f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free</span>
