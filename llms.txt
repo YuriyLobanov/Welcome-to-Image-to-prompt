@@ -5,7 +5,7 @@
 Key facts:
 - Type: browser extension for Google Chrome and other Chromium browsers (Manifest V3).
 - Install: https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg
-- Limits: a daily generation limit per user; no account or API key required.
+- Access: no account or API key required.
 - Input: any image you can right-click on a web page (photo, illustration, screenshot, AI-generated art).
 - Output: a natural-language prompt of roughly 100–180 words describing subject, background, camera, light, palette, textures, style and mood.
 - Actions in the panel: Copy prompt, Regenerate.
@@ -29,7 +29,6 @@ Key facts:
 - What is an image to prompt tool? A tool that reverse-engineers a picture into a text prompt you can reuse in AI image generators.
 - Does it work with any generator? Yes. The prompt is plain descriptive text, so it fits Midjourney, DALL·E, Stable Diffusion, Flux, Leonardo, Ideogram and similar tools.
 - Do I need an account or an API key? No. Install from the Chrome Web Store and use it right away.
-- Is there a limit? There is a daily limit of generations per user; when it is reached the panel asks you to come back later.
 - Which browsers are supported? Google Chrome and Chromium-based browsers that support Chrome extensions and the side panel (for example Edge, Brave, Opera).
 
 ## Optional
