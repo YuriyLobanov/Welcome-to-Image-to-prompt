@@ -1,0 +1,6 @@
+# imagetoprompt.online
+User-agent: *
+Allow: /
+Disallow: /googleb2f811246808522e.html
+
+Sitemap: https://imagetoprompt.online/sitemap.xml

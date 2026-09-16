@@ -1,0 +1,37 @@
+# Image to Prompt
+
+> Image to Prompt is a Chrome extension that turns any picture on the web into a ready-to-use AI prompt. Right-click an image, choose "Get AI prompt", and a side panel shows the words that recreate it. Copy the prompt and paste it into any image generator (Midjourney, DALL·E, Stable Diffusion, Flux, Ideogram and others). No sign-up, no API key, no upload form.
+
+Key facts:
+- Type: browser extension for Google Chrome and other Chromium browsers (Manifest V3).
+- Install: https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg
+- Limits: a daily generation limit per user; no account or API key required.
+- Input: any image you can right-click on a web page (photo, illustration, screenshot, AI-generated art).
+- Output: a natural-language prompt of roughly 100–180 words describing subject, background, camera, light, palette, textures, style and mood.
+- Actions in the panel: Copy prompt, Regenerate.
+- Privacy: the image is sent securely to the extension's own service, processed transiently and forwarded to an AI provider; images are not stored. Only an anonymous identifier is used. Details on the privacy page.
+
+## How it works
+
+1. Right-click any image on any website.
+2. Choose "Get AI prompt" in the context menu.
+3. The Chrome side panel opens with the image thumbnail and the generated prompt.
+4. Click "Copy prompt" and paste it into your image generator, or "Regenerate" for another version.
+
+## Pages
+
+- [Home](https://imagetoprompt.online/): what the extension does, demo of the side panel, link to the Chrome Web Store.
+- [Welcome / first steps](https://imagetoprompt.online/welcome/): how to pin the extension to the toolbar and open the panel after installing.
+- [Privacy Policy](https://imagetoprompt.online/privacy/): what data is processed, how it is used, stored and shared; analytics disclosure.
+
+## Common questions
+
+- What is an image to prompt tool? A tool that reverse-engineers a picture into a text prompt you can reuse in AI image generators.
+- Does it work with any generator? Yes. The prompt is plain descriptive text, so it fits Midjourney, DALL·E, Stable Diffusion, Flux, Leonardo, Ideogram and similar tools.
+- Do I need an account or an API key? No. Install from the Chrome Web Store and use it right away.
+- Is there a limit? There is a daily limit of generations per user; when it is reached the panel asks you to come back later.
+- Which browsers are supported? Google Chrome and Chromium-based browsers that support Chrome extensions and the side panel (for example Edge, Brave, Opera).
+
+## Optional
+
+- [Chrome Web Store listing](https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg): screenshots, ratings, permissions, version history.
