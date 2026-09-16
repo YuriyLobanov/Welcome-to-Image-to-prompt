@@ -1,6 +1,6 @@
 # Image to Prompt
 
-> Image to Prompt is a Chrome extension that turns any picture on the web into a ready-to-use AI prompt. Right-click an image, choose "Get AI prompt", and a side panel shows the words that recreate it. Copy the prompt and paste it into any image generator (ChatGPT Images / GPT Image 2.5 by OpenAI, Gemini / Nano Banana by Google, Midjourney, Stable Diffusion, Flux, Ideogram and others). No sign-up, no API key, no upload form.
+> Image to Prompt is a Chrome extension that turns any picture on the web into a ready-to-use AI prompt. Right-click an image, choose "Get AI prompt", and a side panel shows the words that recreate it. Copy the prompt and paste it into any image generator (ChatGPT Images, Gemini, Midjourney, Stable Diffusion, Flux, Ideogram and others). No sign-up, no API key, no upload form.
 
 Key facts:
 - Type: browser extension for Google Chrome and other Chromium browsers (Manifest V3).
@@ -27,7 +27,7 @@ Key facts:
 ## Common questions
 
 - What is an image to prompt tool? A tool that reverse-engineers a picture into a text prompt you can reuse in AI image generators.
-- Does it work with any generator? Yes. The prompt is plain descriptive text, so it fits ChatGPT Images (GPT Image 2.5), Gemini (Nano Banana 2 and Nano Banana Pro), Midjourney, Stable Diffusion, Flux, Leonardo, Ideogram and similar tools.
+- Does it work with any generator? Yes. The prompt is plain descriptive text, so it fits ChatGPT Images, Gemini, Midjourney, Stable Diffusion, Flux, Ideogram and others.
 - Do I need an account or an API key? No. Install from the Chrome Web Store and use it right away.
 - Which browsers are supported? Google Chrome and Chromium-based browsers that support Chrome extensions and the side panel (for example Edge, Brave, Opera).
 
