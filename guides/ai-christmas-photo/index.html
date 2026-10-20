@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c1c24">
+<title>AI Christmas Photo Generator: ChatGPT &amp; Gemini Prompts</title>
+<meta name="description" content="Turn your own photo into an AI Christmas photo or card. Pick a look, copy the prompt and run it in ChatGPT or Gemini: family card, Santa, pajamas, pets.">
+<link rel="canonical" href="https://imagetoprompt.online/guides/ai-christmas-photo/">
+<link rel="icon" type="image/png" href="/icon128.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Christmas Photo Generator: ChatGPT & Gemini Prompts">
+<meta property="og:description" content="Pick a Christmas look, copy the prompt, upload your photo. Family card, photo with Santa, matching pajamas, snow, pets.">
+<meta property="og:url" content="https://imagetoprompt.online/guides/ai-christmas-photo/">
+<meta property="og:image" content="https://imagetoprompt.online/guides/ai-christmas-photo/img/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Family with a golden retriever on a sofa in front of snowy Christmas trees">
+<meta property="og:site_name" content="Image to Prompt">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-10-20">
+<meta property="article:modified_time" content="2026-10-20">
+<link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w" imagesizes="(max-width: 860px) 100vw, 520px" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "AI Christmas Photo Generator: ChatGPT & Gemini Prompts",
+      "description": "A prompt builder and ready-to-copy prompts for turning your own photo into an AI Christmas photo or card.",
+      "image": "https://imagetoprompt.online/guides/ai-christmas-photo/img/hero-1200.webp",
+      "datePublished": "2026-10-20",
+      "dateModified": "2026-10-20",
+      "mainEntityOfPage": "https://imagetoprompt.online/guides/ai-christmas-photo/",
+      "author": {"@type": "Organization", "name": "Image to Prompt", "url": "https://imagetoprompt.online/"},
+      "publisher": {"@type": "Organization", "name": "Image to Prompt", "logo": {"@type": "ImageObject", "url": "https://imagetoprompt.online/icon128.png"}}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Image to Prompt", "item": "https://imagetoprompt.online/"},
+        {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://imagetoprompt.online/guides/"},
+        {"@type": "ListItem", "position": 3, "name": "AI Christmas photo", "item": "https://imagetoprompt.online/guides/ai-christmas-photo/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Which AI Christmas photo generator should I use?",
+         "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT and Gemini both edit your own photos well. Upload your photo, paste a prompt from this page and send it. If one of them changes the faces, try the same prompt in the other."}},
+        {"@type": "Question", "name": "Can I make a Christmas card with AI?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Tick “Make it a card” in the builder, type your greeting and the prompt asks for a printed card layout with your text. Check the spelling in the result, because AI models still misspell words now and then."}},
+        {"@type": "Question", "name": "How do I keep everyone's faces the same?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Use one sharp photo where every face is visible and well lit, keep the sentence that asks the AI to preserve exact faces, and ask it not to add or remove people. If a face drifts, reply “keep the faces identical to my photo” in the same chat."}},
+        {"@type": "Question", "name": "Can I put my dog or cat in a Christmas photo?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choose the pet look, or pick “Me and my pet” and upload one photo where both of you are visible."}},
+        {"@type": "Question", "name": "Is it safe to upload family photos?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Your photo goes to the AI service you choose, not to this site. Check that service's privacy settings, and ask the people in the photo before you upload it."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#1c1c24;
+    --bg-deep:#13131a;
+    --surface:#232330;
+    --line:#2c2c38;
+    --line-soft:#26262f;
+    --ink:#eaeaf2;
+    --ink-mid:#d6d6e2;
+    --ink-soft:#9a9aaf;
+    --ink-dim:#7a7a8c;
+    --accent:#6c8cff;
+    --r:8px;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+
+  /* header — same as the landing */
+  header{padding:18px 0}
+  .bar{display:flex;align-items:center;gap:26px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+  .brand img{width:30px;height:30px;border-radius:7px}
+  .brand b{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;font-weight:700}
+  .topnav{display:flex;gap:20px}
+  .topnav a{color:var(--ink-soft);text-decoration:none;font-size:14.5px;font-weight:600}
+  .topnav a:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+       border-radius:var(--r);font-weight:700;font-family:inherit;border:none;font-size:15px;
+       text-decoration:none;white-space:nowrap;cursor:pointer;
+       transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s ease, background .18s ease}
+  .btn.primary{background:linear-gradient(180deg,#7d99ff,var(--accent));color:#fff;
+               box-shadow:0 6px 18px rgba(108,140,255,.30), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(108,140,255,.45)}
+  .btn.ghost{background:transparent;color:var(--ink-mid);border:1px solid #3a3a4a}
+  .btn.ghost:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .btn.sm{padding:9px 16px;font-size:13.5px}
+  .btn.md{padding:12px 20px}
+
+  .crumbs{font-size:13px;color:var(--ink-dim);padding-top:6px}
+  .crumbs a{color:var(--ink-soft);text-decoration:none}
+  .crumbs a:hover{color:var(--ink)}
+
+  /* ---------- intro + hero photo ---------- */
+  .intro{display:grid;grid-template-columns:1fr minmax(0,520px);gap:40px;align-items:center;padding:20px 0 10px}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(32px,4.6vw,50px);line-height:1.05;letter-spacing:-.8px}
+  .answer{margin-top:16px;font-size:17.5px;color:var(--ink-mid);max-width:58ch}
+  .meta{margin-top:12px;font-size:13px;color:var(--ink-dim)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;
+                  box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .credit{font-size:12px;color:var(--ink-dim);margin-top:8px}
+  .credit a{color:var(--ink-soft)}
+
+  /* ---------- builder ---------- */
+  .builder{margin:44px 0 10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .builder > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(23px,2.8vw,28px);font-weight:700}
+  .builder .hint{font-size:14.5px;color:var(--ink-soft);margin:4px 0 20px}
+  fieldset{border:none;margin-bottom:20px;min-width:0}
+  legend{font-size:14px;font-weight:700;color:var(--ink-mid);margin-bottom:10px}
+
+  /* the look picker: real photos as radio buttons */
+  .looks{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .look{position:relative;cursor:pointer}
+  .look input{position:absolute;opacity:0;inset:0;cursor:pointer;z-index:1}
+  .look img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;
+            border:2px solid transparent;transition:border-color .15s, transform .15s}
+  .look span{display:block;font-size:13.5px;font-weight:600;color:var(--ink-soft);margin-top:7px;line-height:1.3}
+  .look input:checked ~ img{border-color:var(--accent)}
+  .look input:checked ~ span{color:#fff}
+  .look input:focus-visible ~ img{outline:2px solid var(--accent);outline-offset:2px}
+  .look:hover img{transform:translateY(-2px)}
+
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .chip span{display:block;padding:7px 13px;border-radius:999px;border:1px solid #3a3a4a;
+             font-size:14px;font-weight:600;color:var(--ink-soft);background:var(--bg-deep);
+             transition:border-color .15s, color .15s, background .15s}
+  .chip input:checked + span{border-color:var(--accent);color:#fff;background:rgba(108,140,255,.16)}
+  .chip input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+  .chip input:disabled + span{opacity:.4}
+
+  .card-opt{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+  .toggle{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--ink-mid);cursor:pointer}
+  .toggle input{width:18px;height:18px;accent-color:var(--accent)}
+  .card-opt input[type=text]{flex:1 1 240px;background:var(--bg-deep);border:1px solid #3a3a4a;border-radius:var(--r);
+             color:var(--ink);font:inherit;font-size:14.5px;padding:9px 12px}
+  .card-opt input[type=text]:disabled{opacity:.45}
+
+  .out{background:var(--bg-deep);border:1px solid var(--line);border-radius:var(--r);
+       padding:14px;font-size:14.5px;line-height:1.62;color:var(--ink-mid);min-height:110px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .status{font-size:13px;color:var(--ink-soft);margin-top:8px;min-height:1.2em}
+
+  /* ---------- article ---------- */
+  section.block{padding:48px 0 4px}
+  section.block > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(24px,3vw,30px);
+                     font-weight:700;letter-spacing:-.3px;margin-bottom:12px;max-width:760px}
+  section.block > p{color:var(--ink-mid);margin-bottom:12px;max-width:68ch}
+  ol.steps,ul.tips{padding-left:22px;color:var(--ink-mid);max-width:68ch}
+  ol.steps li,ul.tips li{margin-bottom:9px;padding-left:4px}
+  ol.steps b,ul.tips b{color:var(--ink)}
+
+  .prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:6px}
+  .pcard{background:#212129;border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;
+         display:flex;flex-direction:column}
+  .pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .pcard .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .pcard h3{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;font-weight:700}
+  .pcard p{font-size:14px;line-height:1.6;color:var(--ink-soft);flex:1}
+  .pcard small{font-size:11.5px;color:var(--ink-dim)}
+  .pcard small a{color:var(--ink-dim)}
+  .pcard button{align-self:flex-start}
+
+  .funnel{margin:56px 0 6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+          background:#202029;display:grid;grid-template-columns:260px 1fr;align-items:stretch}
+  .funnel img{width:100%;height:100%;object-fit:cover}
+  .funnel .txt{padding:26px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .funnel h2{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;font-weight:700}
+  .funnel p{color:var(--ink-mid);max-width:60ch}
+  .funnel .btn{align-self:flex-start}
+
+  dl.faq{max-width:72ch}
+  dl.faq dt{font-weight:700;color:var(--ink);margin-top:18px}
+  dl.faq dd{color:var(--ink-mid);margin-top:4px}
+
+  .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .related a{font-size:14.5px;font-weight:600;color:var(--ink-mid);text-decoration:none;
+             border:1px solid #3a3a4a;border-radius:999px;padding:7px 14px}
+  .related a:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .credits{font-size:12.5px;color:var(--ink-dim);max-width:80ch;margin-top:26px}
+  .credits a{color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--line-soft);padding:20px 0 26px;margin-top:48px}
+  .foot{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--ink-dim);flex-wrap:wrap}
+  .foot a{color:var(--ink-soft);text-decoration:none;font-weight:600}
+  .foot a:hover{color:var(--ink)}
+  .foot .right{margin-left:auto}
+
+  @media(max-width:980px){
+    .looks{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:860px){
+    .intro{grid-template-columns:1fr;gap:26px}
+    .row{grid-template-columns:1fr}
+    .funnel{grid-template-columns:1fr}
+    .funnel img{aspect-ratio:16/9;height:auto}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 16px}
+    .topnav{display:none}
+    .btn.sm .xt{display:none}
+    .builder{padding:18px 14px;border-radius:12px;margin-top:32px}
+    .looks{grid-template-columns:repeat(2,1fr);gap:10px}
+    .actions .btn{flex:1 1 100%}
+    .prompts{grid-template-columns:1fr}
+    .funnel .txt{padding:20px}
+    .funnel .btn{align-self:stretch}
+    .foot{flex-direction:column;gap:7px;text-align:center}
+    .foot .right{margin:0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .btn,.look img,.chip span{transition:none}
+    .btn.primary:hover,.look:hover img{transform:none}
+  }
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(111860198, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111860198" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/icon128.png" alt="Image to Prompt logo" width="30" height="30">
+      <b>Image to prompt</b>
+    </a>
+    <nav class="topnav"><a href="/guides/">Guides</a><a href="/welcome/">How to use</a></nav>
+    <a class="btn primary sm" data-goal="cws_header" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=ai_christmas_photo" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+      Install<span class="xt">&nbsp;the extension</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Image to Prompt</a> / <a href="/guides/">Guides</a> / <span aria-current="page">AI Christmas photo</span>
+  </nav>
+
+  <div class="intro">
+    <div>
+      <h1>AI Christmas photo generator: make yours in ChatGPT or Gemini</h1>
+      <p class="answer">Start from a photo you already have. Upload it to ChatGPT or Gemini and paste a prompt that keeps every face exactly as it is while adding the tree, the lights, the outfits or Santa himself. Pick a look below and copy your prompt.</p>
+      <p class="meta">Updated <time datetime="2026-10-20">October 20, 2026</time> · Works with ChatGPT and Gemini (Nano Banana)</p>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/hero-800.webp" srcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w"
+           sizes="(max-width: 860px) 100vw, 520px" width="1200" height="750" fetchpriority="high"
+           alt="Family of five and a golden retriever sitting on a white sofa in front of snowy Christmas trees">
+      <figcaption class="credit">The studio Christmas card look. Photo: <a href="https://unsplash.com/photos/K-4Yugk0b1Y" rel="nofollow noopener" target="_blank">Jennifer Kalenberg / Unsplash</a></figcaption>
+    </figure>
+  </div>
+
+  <form class="builder" id="form" onsubmit="return false">
+    <h2>Build your Christmas photo prompt</h2>
+    <p class="hint">Choose a look and who is in your photo. The prompt updates as you click.</p>
+
+    <fieldset>
+      <legend>Look</legend>
+      <div class="looks">
+        <label class="look"><input type="radio" name="look" value="family" checked><img src="img/family-480.webp" width="480" height="360" alt="" loading="lazy"><span>Family Christmas card</span></label>
+        <label class="look"><input type="radio" name="look" value="santa"><img src="img/santa-480.webp" width="480" height="360" alt="" loading="lazy"><span>Photo with Santa</span></label>
+        <label class="look"><input type="radio" name="look" value="pajamas"><img src="img/pajamas-480.webp" width="480" height="360" alt="" loading="lazy"><span>Matching pajamas</span></label>
+        <label class="look"><input type="radio" name="look" value="tree"><img src="img/tree-480.webp" width="480" height="360" alt="" loading="lazy"><span>Cozy by the tree</span></label>
+        <label class="look"><input type="radio" name="look" value="snow"><img src="img/snow-480.webp" width="480" height="360" alt="" loading="lazy"><span>Snowy outdoors</span></label>
+        <label class="look"><input type="radio" name="look" value="pet"><img src="img/pet-480.webp" width="480" height="360" alt="" loading="lazy"><span>Pet in a Santa hat</span></label>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <fieldset>
+        <legend>Who is in your photo</legend>
+        <div class="chips" id="who">
+          <label class="chip"><input type="radio" name="who" value="me" checked><span>Just me</span></label>
+          <label class="chip"><input type="radio" name="who" value="couple"><span>Couple</span></label>
+          <label class="chip"><input type="radio" name="who" value="family"><span>Family</span></label>
+          <label class="chip"><input type="radio" name="who" value="mepet"><span>Me and my pet</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>For</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="target" value="chatgpt" checked><span>ChatGPT</span></label>
+          <label class="chip"><input type="radio" name="target" value="gemini"><span>Gemini</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset>
+      <legend>Christmas card</legend>
+      <div class="card-opt">
+        <label class="toggle"><input type="checkbox" id="card"> Make it a card</label>
+        <input type="text" id="greeting" value="Merry Christmas from our family" maxlength="60" aria-label="Card greeting" disabled>
+      </div>
+    </fieldset>
+
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button class="btn primary md" type="button" id="copy">Copy prompt</button>
+      <a class="btn ghost md" id="open" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </form>
+
+  <section class="block">
+    <h2>How to make an AI Christmas photo</h2>
+    <ol class="steps">
+      <li><b>Choose one sharp photo.</b> Faces toward the camera, even light, nobody cut off. For a group, use a single photo with everyone in it.</li>
+      <li><b>Open ChatGPT or Gemini</b> and attach the photo with the + button.</li>
+      <li><b>Paste your prompt</b> from the builder and send it.</li>
+      <li><b>Fix details in the same chat.</b> Try “warmer light”, “more snow” or “keep the faces identical to my photo”.</li>
+      <li><b>Download the image</b> and share it or print it as a card.</li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Six Christmas photo prompts to copy</h2>
+    <p>Each prompt is written for a photo of one person. The builder above adapts it for couples, families and pets.</p>
+    <div class="prompts">
+      <article class="pcard">
+        <img src="img/family-480.webp" srcset="img/family-480.webp 480w, img/family-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Parents and a little girl in reindeer antlers playing with a carousel ornament by a Christmas tree">
+        <div class="body">
+          <h3>Family Christmas card</h3>
+          <p>Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression. Turn it into a family Christmas card portrait in a cozy living room, with a decorated tree and warm string lights behind me and wrapped gifts nearby. Dress me in a cream knit sweater. Soft warm window light. Make it look like a real photograph with natural skin texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/j5rdv2nMtqg" rel="nofollow noopener" target="_blank">Dmitry Rodionov / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/santa-480.webp" srcset="img/santa-480.webp 480w, img/santa-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Smiling boy handing his wish list to Santa Claus in a red suit at a decorated holiday set">
+        <div class="body">
+          <h3>AI Santa photo</h3>
+          <p>Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression. Place me next to a real-looking Santa Claus with a full white beard and a red velvet suit, on a festive Santa set with a decorated tree and presents. We are both smiling at the camera. Warm, even event lighting. Make it look like a real photograph with natural skin texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/YZZz0_MfHto" rel="nofollow noopener" target="_blank">__ drz __ / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/pajamas-480.webp" srcset="img/pajamas-480.webp 480w, img/pajamas-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Four people in matching plaid Christmas pajamas and Santa hats posing by a decorated tree">
+        <div class="body">
+          <h3>Matching Christmas pajamas</h3>
+          <p>Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression. Make it a Christmas morning photo on the floor beside the tree, opening presents, wearing red-and-white plaid Christmas pajamas and a Santa hat. Bright, airy morning light. Make it look like a real photograph with natural skin texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/bal2WGXn6cg" rel="nofollow noopener" target="_blank">Ufoma Ojo / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/tree-480.webp" srcset="img/tree-480.webp 480w, img/tree-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Woman in a green knit sweater lying on a white blanket in front of a Christmas tree with fairy lights">
+        <div class="body">
+          <h3>Cozy by the tree</h3>
+          <p>Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression. Show me relaxing on a soft white blanket in front of a Christmas tree glowing with fairy lights, wearing a chunky green knit sweater. Shallow depth of field with warm bokeh. Make it look like a real photograph with natural skin texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/JnKnny_MSCI" rel="nofollow noopener" target="_blank">Zaven Baghdasaryan / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/snow-480.webp" srcset="img/snow-480.webp 480w, img/snow-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Young woman in a red wool cape standing in a snowy forest">
+        <div class="body">
+          <h3>Snowy outdoors</h3>
+          <p>Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression. Place me outdoors in a snowy forest with gentle snowfall, wearing a red wool coat and a knit scarf. Soft overcast winter light. Make it look like a real photograph with natural skin texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/J4Frh80CjGA" rel="nofollow noopener" target="_blank">Virginia Berbece / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/pet-480.webp" srcset="img/pet-480.webp 480w, img/pet-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Husky wearing a red Santa hat in front of a decorated Christmas tree">
+        <div class="body">
+          <h3>Pet in a Santa hat</h3>
+          <p>Using the photo of my pet I uploaded, keep its exact breed, face, fur color and markings. Show it wearing a small red Santa hat, sitting in front of a decorated Christmas tree with warm lights. Natural, sharp pet portrait. Make it look like a real photograph with natural fur texture, not an illustration.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/HEhv1rR0iYA" rel="nofollow noopener" target="_blank">Alin Luna / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Turn it into an AI Christmas card</h2>
+    <p>Tick “Make it a card” in the builder and type your greeting. The prompt asks for a printed card layout with your words in the lower part of the image.</p>
+    <ul class="tips">
+      <li><b>Keep the greeting short.</b> Under eight words prints cleanly; long sentences are where AI spelling mistakes appear.</li>
+      <li><b>Check every letter</b> before you print. If a word is wrong, reply “fix the spelling of …” in the same chat.</li>
+      <li><b>For a 5×7 print</b>, add “vertical 5:7 format” to the prompt.</li>
+    </ul>
+  </section>
+
+  <aside class="funnel">
+    <img src="img/tree-480.webp" width="480" height="360" loading="lazy" alt="">
+    <div class="txt">
+      <h2>Saw a Christmas photo you love? Get its prompt.</h2>
+      <p>Image to Prompt is a Chrome extension. Right-click any picture on Pinterest, Instagram or Google Images and it writes a prompt that recreates the light, setting and outfits, ready to use with your own photo.</p>
+      <a class="btn primary md" data-goal="cws_funnel" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=ai_christmas_photo" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </aside>
+
+  <section class="block">
+    <h2>Tips for a realistic result</h2>
+    <ul class="tips">
+      <li><b>Ask for real light, not “beautiful” light.</b> Window light, string lights or overcast snow light look like a photo; vague praise words give a glossy, plastic look.</li>
+      <li><b>Keep “natural skin texture” in the prompt.</b> It stops the airbrushed effect.</li>
+      <li><b>Don't change too much at once.</b> Swap the setting first, then the outfits in a second message.</li>
+      <li><b>Mention the number of people</b> in group photos so nobody is added or dropped.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Questions</h2>
+    <dl class="faq">
+      <dt>Which AI Christmas photo generator should I use?</dt>
+      <dd>ChatGPT and Gemini both edit your own photos well. Upload your photo, paste a prompt from this page and send it. If one of them changes the faces, try the same prompt in the other.</dd>
+      <dt>Can I make a Christmas card with AI?</dt>
+      <dd>Yes. Tick “Make it a card” in the builder, type your greeting and the prompt asks for a printed card layout with your text. Check the spelling in the result, because AI models still misspell words now and then.</dd>
+      <dt>How do I keep everyone's faces the same?</dt>
+      <dd>Use one sharp photo where every face is visible and well lit, keep the sentence that asks the AI to preserve exact faces, and ask it not to add or remove people. If a face drifts, reply “keep the faces identical to my photo” in the same chat.</dd>
+      <dt>Can I put my dog or cat in a Christmas photo?</dt>
+      <dd>Yes. Choose the pet look, or pick “Me and my pet” and upload one photo where both of you are visible.</dd>
+      <dt>Is it safe to upload family photos?</dt>
+      <dd>Your photo goes to the AI service you choose, not to this site. Check that service's privacy settings, and ask the people in the photo before you upload it.</dd>
+    </dl>
+  </section>
+
+  <section class="block">
+    <h2>More guides</h2>
+    <div class="related">
+      <a href="/guides/">All guides</a>
+      <a href="/">Turn any image into a prompt</a>
+      <a href="/welcome/">How the extension works</a>
+    </div>
+    <p class="credits">Photos on this page are real reference photos from Unsplash, used under the Unsplash License, to show each look. They were not made with AI.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Image to Prompt</span>
+    <a href="/privacy/">Privacy</a>
+    <a class="right" href="/">imagetoprompt.online</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LOOKS = {
+    family:{scene:"a family Christmas card portrait in a cozy living room, with a decorated tree and warm string lights behind {us} and wrapped gifts nearby",
+            outfit:"coordinated knit sweaters in cream, red and green", one:"a cream knit sweater", light:"soft warm window light"},
+    santa:{scene:"a photo next to a real-looking Santa Claus with a full white beard and a red velvet suit, on a festive Santa set with a decorated tree and presents, everyone smiling at the camera",
+           outfit:"festive holiday outfits", one:"a festive holiday outfit", light:"warm, even event lighting"},
+    pajamas:{scene:"a Christmas morning photo on the floor beside the tree, opening presents",
+             outfit:"matching red-and-white plaid Christmas pajamas and Santa hats", one:"red-and-white plaid Christmas pajamas and a Santa hat", light:"bright, airy morning light"},
+    tree:{scene:"a relaxed portrait on a soft white blanket in front of a Christmas tree glowing with fairy lights",
+          outfit:"chunky knit sweaters", one:"a chunky green knit sweater", light:"shallow depth of field with warm bokeh"},
+    snow:{scene:"an outdoor portrait in a snowy forest with gentle snowfall",
+          outfit:"red wool coats and knit scarves", one:"a red wool coat and a knit scarf", light:"soft overcast winter light"},
+    pet:{scene:"a pet portrait in front of a decorated Christmas tree with warm lights",
+         outfit:"a small red Santa hat", one:"a small red Santa hat", light:"natural, sharp light"}
+  };
+  var WHO = {
+    me:{keep:"Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression.", us:"me", wear:"Dress me in "},
+    couple:{keep:"Using the photo I uploaded, keep both of our exact faces, facial features, skin tones, ages and expressions. Keep exactly two people.", us:"us", wear:"Dress us in "},
+    family:{keep:"Using the photo I uploaded, keep everyone's exact faces, facial features, skin tones, ages and expressions. Keep the same number of people; don't add or remove anyone.", us:"us", wear:"Dress everyone in "},
+    mepet:{keep:"Using the photo I uploaded, keep my exact face, facial features, skin tone, age and expression, and keep my pet's exact breed, face, fur color and markings.", us:"us", wear:"Dress me in "},
+    pet:{keep:"Using the photo of my pet I uploaded, keep its exact breed, face, fur color and markings.", us:"it", wear:""}
+  };
+  var TARGET = {chatgpt:"ChatGPT", gemini:"Gemini"};
+
+  var form = document.getElementById("form"), out = document.getElementById("out"),
+      open = document.getElementById("open"), status = document.getElementById("status"),
+      card = document.getElementById("card"), greeting = document.getElementById("greeting");
+
+  function val(n){ var el = form.querySelector('input[name="'+n+'"]:checked'); return el ? el.value : null; }
+
+  function build(){
+    var look = val("look"), t = val("target"), isPet = look === "pet";
+    form.querySelectorAll('input[name="who"]').forEach(function(i){ i.disabled = isPet; });
+    var W = WHO[isPet ? "pet" : val("who")], L = LOOKS[look];
+    greeting.disabled = !card.checked;
+    var outfit = (isPet || val("who") === "me" || val("who") === "mepet") ? L.one : L.outfit;
+    var text = (t === "gemini" ? "Edit this photo. " : "") + W.keep + " " +
+      "Turn it into " + L.scene.replace("{us}", W.us) + ". " +
+      (isPet ? "Put " + outfit + " on my pet. " : W.wear + outfit + ". ") +
+      L.light.charAt(0).toUpperCase() + L.light.slice(1) + ".";
+    if (card.checked && greeting.value.trim()){
+      text += " Lay it out as a printed holiday card with the text “" + greeting.value.trim() +
+              "” in elegant lettering in the lower part of the image, spelled exactly as written.";
+    }
+    text += isPet ? " Make it look like a real photograph with natural fur texture, not an illustration."
+                  : " Make it look like a real photograph with natural skin texture, not an illustration.";
+    out.textContent = text;
+    if (t === "gemini"){ open.href = "https://gemini.google.com/app"; open.textContent = "Open Gemini"; }
+    else { open.href = "https://chatgpt.com/?q=" + encodeURIComponent(text); open.textContent = "Open ChatGPT"; }
+    status.textContent = "";
+  }
+  form.addEventListener("change", build);
+  greeting.addEventListener("input", build);
+  build();
+
+  function goal(name){ try { if (window.ym) ym(111860198, "reachGoal", name); } catch(e){} }
+  function copy(text, done){
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+      .then(done, function(){
+        var ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand("copy"); done(); } catch(e){} ta.remove();
+      });
+  }
+  document.getElementById("copy").addEventListener("click", function(){
+    copy(out.textContent, function(){
+      status.textContent = "Copied. Now attach your photo in " + TARGET[val("target")] + " and paste.";
+      goal("prompt_copy_builder");
+    });
+  });
+  open.addEventListener("click", function(){ goal("open_" + val("target")); });
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      copy(b.parentNode.querySelector("p").textContent, function(){
+        b.textContent = "Copied"; setTimeout(function(){ b.textContent = "Copy"; }, 1800);
+        goal("prompt_copy_card");
+      });
+    });
+  });
+  document.querySelectorAll("[data-goal]").forEach(function(a){
+    a.addEventListener("click", function(){ goal(a.getAttribute("data-goal")); });
+  });
+})();
+</script>
+</body>
+</html>

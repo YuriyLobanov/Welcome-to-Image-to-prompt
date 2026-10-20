@@ -24,6 +24,11 @@ Key facts:
 - [Welcome / first steps](https://imagetoprompt.online/welcome/): how to pin the extension to the toolbar and open the panel after installing.
 - [Privacy Policy](https://imagetoprompt.online/privacy/): what data is processed, how it is used, stored and shared; analytics disclosure.
 
+## Guides
+
+- [Guides](https://imagetoprompt.online/guides/): practical guides to AI images and prompts.
+- [AI Christmas photo generator](https://imagetoprompt.online/guides/ai-christmas-photo/): prompts and a prompt builder for turning your own photo into a Christmas photo or card in ChatGPT or Gemini (family card, photo with Santa, matching pajamas, snowy outdoors, pet in a Santa hat).
+
 ## Common questions
 
 - What is an image to prompt tool? A tool that reverse-engineers a picture into a text prompt you can reuse in AI image generators.
