@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c1c24">
+<title>AI Pet Portrait Generator: Turn Your Pet&#39;s Photo Into Art</title>
+<meta name="description" content="Turn your dog or cat&#39;s photo into an AI pet portrait: Renaissance noble, oil painting, watercolor or sketch. Pick a style, copy the prompt for ChatGPT or Gemini.">
+<link rel="canonical" href="https://imagetoprompt.online/guides/ai-pet-portrait/">
+<link rel="icon" type="image/png" href="/icon128.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Pet Portrait Generator: Turn Your Pet&#39;s Photo Into Art">
+<meta property="og:description" content="Pick a style, copy the prompt, upload your pet's photo: Renaissance noble, oil painting, watercolor, pencil sketch and more.">
+<meta property="og:url" content="https://imagetoprompt.online/guides/ai-pet-portrait/">
+<meta property="og:image" content="https://imagetoprompt.online/guides/ai-pet-portrait/img/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Golden retriever looking into the camera against a blue studio backdrop">
+<meta property="og:site_name" content="Image to Prompt">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-10-21">
+<meta property="article:modified_time" content="2026-10-21">
+<link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w" imagesizes="(max-width: 860px) 100vw, 520px" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "AI Pet Portrait Generator: Turn Your Pet's Photo Into Art",
+   "description": "A prompt builder and ready-to-copy prompts for turning a photo of your pet into a portrait in ChatGPT or Gemini.",
+   "image": "https://imagetoprompt.online/guides/ai-pet-portrait/img/og-1200x630.jpg",
+   "datePublished": "2026-10-21",
+   "dateModified": "2026-10-21",
+   "mainEntityOfPage": "https://imagetoprompt.online/guides/ai-pet-portrait/",
+   "author": {
+    "@type": "Organization",
+    "name": "Image to Prompt",
+    "url": "https://imagetoprompt.online/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Image to Prompt",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://imagetoprompt.online/icon128.png"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Image to Prompt",
+     "item": "https://imagetoprompt.online/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://imagetoprompt.online/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI pet portrait",
+     "item": "https://imagetoprompt.online/guides/ai-pet-portrait/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Which AI pet portrait generator should I use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ChatGPT and Gemini both edit your own pet photos well. Upload the photo, paste a prompt from this page and send it. If one of them changes your pet's face or markings, try the same prompt in the other."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work for cats and other pets?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The default prompts are written for an AI dog portrait; choose “My cat” in the builder and the prompt keeps the cat's face, eye color and coat pattern. For rabbits, birds and other pets, use the dog prompt and replace the word “dog”."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I be in the portrait with my dog?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Choose “Me and my pet” and upload one photo where both of you are visible. The prompt asks the AI to keep both faces."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I make a Renaissance pet portrait?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pick the Renaissance noble style, upload your pet's photo and send the prompt. It dresses your pet in a velvet cloak and lace collar and paints it in the style of a 17th-century oil portrait."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I print an AI pet portrait?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, for small and medium prints. Download the largest version and upscale it for anything bigger than 8×10 inches. Check the eyes and whiskers at full size before you order."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#1c1c24;
+    --bg-deep:#13131a;
+    --surface:#232330;
+    --line:#2c2c38;
+    --line-soft:#26262f;
+    --ink:#eaeaf2;
+    --ink-mid:#d6d6e2;
+    --ink-soft:#9a9aaf;
+    --ink-dim:#7a7a8c;
+    --accent:#6c8cff;
+    --r:8px;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+
+  /* header — same as the landing */
+  header{padding:18px 0}
+  .bar{display:flex;align-items:center;gap:26px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+  .brand img{width:30px;height:30px;border-radius:7px}
+  .brand b{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;font-weight:700}
+  .topnav{display:flex;gap:20px}
+  .topnav a{color:var(--ink-soft);text-decoration:none;font-size:14.5px;font-weight:600}
+  .topnav a:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+       border-radius:var(--r);font-weight:700;font-family:inherit;border:none;font-size:15px;
+       text-decoration:none;white-space:nowrap;cursor:pointer;
+       transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s ease, background .18s ease}
+  .btn.primary{background:linear-gradient(180deg,#7d99ff,var(--accent));color:#fff;
+               box-shadow:0 6px 18px rgba(108,140,255,.30), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(108,140,255,.45)}
+  .btn.ghost{background:transparent;color:var(--ink-mid);border:1px solid #3a3a4a}
+  .btn.ghost:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .btn.sm{padding:9px 16px;font-size:13.5px}
+  .btn.md{padding:12px 20px}
+
+  .crumbs{font-size:13px;color:var(--ink-dim);padding-top:6px}
+  .crumbs a{color:var(--ink-soft);text-decoration:none}
+  .crumbs a:hover{color:var(--ink)}
+
+  /* ---------- intro + hero photo ---------- */
+  .intro{display:grid;grid-template-columns:1fr minmax(0,520px);gap:40px;align-items:center;padding:20px 0 10px}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(32px,4.6vw,50px);line-height:1.05;letter-spacing:-.8px}
+  .answer{margin-top:16px;font-size:17.5px;color:var(--ink-mid);max-width:58ch}
+  .meta{margin-top:12px;font-size:13px;color:var(--ink-dim)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;
+                  box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .credit{font-size:12px;color:var(--ink-dim);margin-top:8px}
+  .credit a{color:var(--ink-soft)}
+
+  /* ---------- builder ---------- */
+  .builder{margin:44px 0 10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .builder > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(23px,2.8vw,28px);font-weight:700}
+  .builder .hint{font-size:14.5px;color:var(--ink-soft);margin:4px 0 20px}
+  fieldset{border:none;margin-bottom:20px;min-width:0}
+  legend{font-size:14px;font-weight:700;color:var(--ink-mid);margin-bottom:10px}
+
+  /* the look picker: real photos as radio buttons */
+  .looks{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .look{position:relative;cursor:pointer}
+  .look input{position:absolute;opacity:0;inset:0;cursor:pointer;z-index:1}
+  .look img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;
+            border:2px solid transparent;transition:border-color .15s, transform .15s}
+  .look span{display:block;font-size:13.5px;font-weight:600;color:var(--ink-soft);margin-top:7px;line-height:1.3}
+  .look input:checked ~ img{border-color:var(--accent)}
+  .look input:checked ~ span{color:#fff}
+  .look input:focus-visible ~ img{outline:2px solid var(--accent);outline-offset:2px}
+  .look:hover img{transform:translateY(-2px)}
+
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .chip span{display:block;padding:7px 13px;border-radius:999px;border:1px solid #3a3a4a;
+             font-size:14px;font-weight:600;color:var(--ink-soft);background:var(--bg-deep);
+             transition:border-color .15s, color .15s, background .15s}
+  .chip input:checked + span{border-color:var(--accent);color:#fff;background:rgba(108,140,255,.16)}
+  .chip input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+  .chip input:disabled + span{opacity:.4}
+
+  .card-opt{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+  .toggle{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--ink-mid);cursor:pointer}
+  .toggle input{width:18px;height:18px;accent-color:var(--accent)}
+  .card-opt input[type=text]{flex:1 1 240px;background:var(--bg-deep);border:1px solid #3a3a4a;border-radius:var(--r);
+             color:var(--ink);font:inherit;font-size:14.5px;padding:9px 12px}
+  .card-opt input[type=text]:disabled{opacity:.45}
+
+  .out{background:var(--bg-deep);border:1px solid var(--line);border-radius:var(--r);
+       padding:14px;font-size:14.5px;line-height:1.62;color:var(--ink-mid);min-height:110px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .status{font-size:13px;color:var(--ink-soft);margin-top:8px;min-height:1.2em}
+
+  /* ---------- article ---------- */
+  section.block{padding:48px 0 4px}
+  section.block > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(24px,3vw,30px);
+                     font-weight:700;letter-spacing:-.3px;margin-bottom:12px;max-width:760px}
+  section.block > p{color:var(--ink-mid);margin-bottom:12px;max-width:68ch}
+  ol.steps,ul.tips{padding-left:22px;color:var(--ink-mid);max-width:68ch}
+  ol.steps li,ul.tips li{margin-bottom:9px;padding-left:4px}
+  ol.steps b,ul.tips b{color:var(--ink)}
+
+  .prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:6px}
+  .pcard{background:#212129;border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;
+         display:flex;flex-direction:column}
+  .pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .pcard .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .pcard h3{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;font-weight:700}
+  .pcard p{font-size:14px;line-height:1.6;color:var(--ink-soft);flex:1}
+  .pcard small{font-size:11.5px;color:var(--ink-dim)}
+  .pcard small a{color:var(--ink-dim)}
+  .pcard button{align-self:flex-start}
+
+  .funnel{margin:56px 0 6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+          background:#202029;display:grid;grid-template-columns:260px 1fr;align-items:stretch}
+  .funnel img{width:100%;height:100%;object-fit:cover}
+  .funnel .txt{padding:26px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .funnel h2{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;font-weight:700}
+  .funnel p{color:var(--ink-mid);max-width:60ch}
+  .funnel .btn{align-self:flex-start}
+
+  dl.faq{max-width:72ch}
+  dl.faq dt{font-weight:700;color:var(--ink);margin-top:18px}
+  dl.faq dd{color:var(--ink-mid);margin-top:4px}
+
+  .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .related a{font-size:14.5px;font-weight:600;color:var(--ink-mid);text-decoration:none;
+             border:1px solid #3a3a4a;border-radius:999px;padding:7px 14px}
+  .related a:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .credits{font-size:12.5px;color:var(--ink-dim);max-width:80ch;margin-top:26px}
+  .credits a{color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--line-soft);padding:20px 0 26px;margin-top:48px}
+  .foot{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--ink-dim);flex-wrap:wrap}
+  .foot a{color:var(--ink-soft);text-decoration:none;font-weight:600}
+  .foot a:hover{color:var(--ink)}
+  .foot .right{margin-left:auto}
+
+  @media(max-width:980px){
+    .looks{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:860px){
+    .intro{grid-template-columns:1fr;gap:26px}
+    .row{grid-template-columns:1fr}
+    .funnel{grid-template-columns:1fr}
+    .funnel img{aspect-ratio:16/9;height:auto}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 16px}
+    .bar{gap:14px}
+    .brand img{width:26px;height:26px}
+    .brand b{font-size:15.5px;white-space:nowrap}
+    .topnav a{font-size:13.5px}
+    .topnav .nav-extra{display:none}
+    .btn.sm .xt{display:none}
+    .builder{padding:18px 14px;border-radius:12px;margin-top:32px}
+    .looks{grid-template-columns:repeat(2,1fr);gap:10px}
+    .actions .btn{flex:1 1 100%}
+    .prompts{grid-template-columns:1fr}
+    .funnel .txt{padding:20px}
+    .funnel .btn{align-self:stretch}
+    .foot{flex-direction:column;gap:7px;text-align:center}
+    .foot .right{margin:0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .btn,.look img,.chip span{transition:none}
+    .btn.primary:hover,.look:hover img{transform:none}
+  }
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(111860198, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111860198" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/icon128.png" alt="Image to Prompt logo" width="30" height="30">
+      <b>Image to prompt</b>
+    </a>
+    <nav class="topnav"><a href="/guides/">Guides</a><a class="nav-extra" href="/welcome/">How to use</a></nav>
+    <a class="btn primary sm" data-goal="cws_header" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=ai_pet_portrait" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+      Install<span class="xt">&nbsp;the extension</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Image to Prompt</a> / <a href="/guides/">Guides</a> / <span aria-current="page">AI pet portrait</span>
+  </nav>
+
+  <div class="intro">
+    <div>
+      <h1>AI pet portrait generator: turn your pet's photo into a portrait</h1>
+      <p class="answer">Upload a clear photo of your dog or cat to ChatGPT or Gemini and paste a prompt that keeps your pet's face, fur and markings while changing the style: a Renaissance noble, a classic oil painting, a soft watercolor or a pencil sketch. Pick a style below and copy your prompt.</p>
+      <p class="meta">Updated <time datetime="2026-10-21">October 21, 2026</time> · Works with ChatGPT and Gemini (Nano Banana)</p>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/hero-800.webp" srcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w"
+           sizes="(max-width: 860px) 100vw, 520px" width="1200" height="900" fetchpriority="high"
+           alt="Golden retriever looking into the camera against a blue studio backdrop">
+      <figcaption class="credit">A good starting photo: sharp eyes, even light, the whole face in frame. Photo: <a href="https://unsplash.com/photos/x5oPmHmY3kQ" rel="nofollow noopener" target="_blank">Victor G / Unsplash</a></figcaption>
+    </figure>
+  </div>
+
+  <form class="builder" id="form" onsubmit="return false">
+    <h2>Build your pet portrait prompt</h2>
+    <p class="hint">Choose a style and who is in the photo. The prompt updates as you click.</p>
+
+    <fieldset>
+      <legend>Style</legend>
+      <div class="looks">
+        <label class="look"><input type="radio" name="look" value="royal" checked><img src="img/royal-480.webp" width="480" height="360" alt="" loading="lazy"><span>Renaissance noble</span></label>
+        <label class="look"><input type="radio" name="look" value="oil"><img src="img/oil-480.webp" width="480" height="360" alt="" loading="lazy"><span>Classic oil painting</span></label>
+        <label class="look"><input type="radio" name="look" value="watercolor"><img src="img/watercolor-480.webp" width="480" height="360" alt="" loading="lazy"><span>Watercolor</span></label>
+        <label class="look"><input type="radio" name="look" value="sketch"><img src="img/sketch-480.webp" width="480" height="360" alt="" loading="lazy"><span>Pencil sketch</span></label>
+        <label class="look"><input type="radio" name="look" value="studio"><img src="img/studio-480.webp" width="480" height="360" alt="" loading="lazy"><span>Color studio photo</span></label>
+        <label class="look"><input type="radio" name="look" value="christmas"><img src="img/christmas-480.webp" width="480" height="360" alt="" loading="lazy"><span>Christmas portrait</span></label>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <fieldset>
+        <legend>Who is in your photo</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="who" value="dog" checked><span>My dog</span></label>
+          <label class="chip"><input type="radio" name="who" value="cat"><span>My cat</span></label>
+          <label class="chip"><input type="radio" name="who" value="two"><span>Two pets</span></label>
+          <label class="chip"><input type="radio" name="who" value="owner"><span>Me and my pet</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>For</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="target" value="chatgpt" checked><span>ChatGPT</span></label>
+          <label class="chip"><input type="radio" name="target" value="gemini"><span>Gemini</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset>
+      <legend>Presentation</legend>
+      <div class="card-opt">
+        <label class="toggle"><input type="checkbox" id="frame"> Show it framed on a wall</label>
+        <label class="toggle"><input type="checkbox" id="name"> Add a name plaque</label>
+        <input type="text" id="petname" value="Max" maxlength="24" aria-label="Pet's name" disabled>
+      </div>
+    </fieldset>
+
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button class="btn primary md" type="button" id="copy">Copy prompt</button>
+      <a class="btn ghost md" id="open" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </form>
+
+  <section class="block">
+    <h2>How to make a pet portrait from a photo</h2>
+    <ol class="steps">
+      <li><b>Pick your best photo.</b> Eyes in focus, daylight or soft indoor light, the whole head in frame. Photos taken at your pet's eye level work best.</li>
+      <li><b>Open ChatGPT or Gemini</b> and attach the photo with the + button.</li>
+      <li><b>Paste your prompt</b> from the builder and send it.</li>
+      <li><b>Compare with the original.</b> If an ear, a spot or the eye color is off, reply with exactly what to fix, for example “the white patch is on the left side of the chest”.</li>
+      <li><b>Download the result</b> and keep the largest version for printing.</li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Six pet portrait styles to copy</h2>
+    <p>Each prompt is written for one dog. The builder above adapts it for cats, two pets or a portrait with you. Every reference image below is a real painting, drawing or photo, not an AI result.</p>
+    <div class="prompts">
+      <article class="pcard">
+        <img src="img/royal-480.webp" srcset="img/royal-480.webp 480w, img/royal-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Detail of a 17th-century oil portrait: a greyhound resting its head against its owner's black velvet doublet">
+        <div class="body">
+          <h3>Renaissance pet portrait</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Paint it as a 17th-century noble in an oil portrait: a dark velvet cloak, a white lace collar and a gold chain, posed in front of deep green drapery. Rich old-master oil painting with visible brushwork, warm candle-like light and a dark background.</p>
+          <small>Reference: Anthony van Dyck, <a href="https://unsplash.com/photos/8zr2vUAeXog" rel="nofollow noopener" target="_blank">James Stuart, Duke of Richmond and Lennox, c. 1633–35</a>, The Met</small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/oil-480.webp" srcset="img/oil-480.webp 480w, img/oil-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="19th-century oil study of a Leonberger's head on a grey background">
+        <div class="body">
+          <h3>Classic oil painting</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Turn it into a classic 19th-century oil portrait of the head and shoulders, with soft, loose brushstrokes, natural fur texture and a plain warm-grey background. Calm, dignified expression.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/gmeFvXrFN5I" rel="nofollow noopener" target="_blank">Head of a Leonberger, c. 1880–92</a>, Rijksmuseum</small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/watercolor-480.webp" srcset="img/watercolor-480.webp 480w, img/watercolor-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Watercolor portrait of a light-coated dog with loose peach and grey washes">
+        <div class="body">
+          <h3>Watercolor pet portrait</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Turn it into a loose watercolor portrait on textured white paper: soft washes, gentle color bleeds, fine detail around the eyes and nose, and unpainted paper around the edges.</p>
+          <small>Reference: Anna Triik-Põllusaar, <a href="https://unsplash.com/photos/UzITwzITVlY" rel="nofollow noopener" target="_blank">Tuks, 1929</a>, Tartu Art Museum</small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/sketch-480.webp" srcset="img/sketch-480.webp 480w, img/sketch-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Graphite pencil drawing of a short-haired dog in profile wearing a collar">
+        <div class="body">
+          <h3>Pencil sketch</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Turn it into a detailed graphite pencil drawing on white paper, with fine hatching for the fur, strong shading around the eyes and a light, unfinished outline at the edges.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/wvYdfoWPaQM" rel="nofollow noopener" target="_blank">Chris Curry / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/studio-480.webp" srcset="img/studio-480.webp 480w, img/studio-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Small fluffy dog sitting in front of a bright yellow studio backdrop">
+        <div class="body">
+          <h3>Color studio photo</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Turn it into a professional studio portrait: sitting upright in front of a seamless bright yellow backdrop, soft even studio lighting, sharp focus on the eyes. Make it look like a real photograph with natural fur texture.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/uge9QXIreS4" rel="nofollow noopener" target="_blank">Karsten Winegeart / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/christmas-480.webp" srcset="img/christmas-480.webp 480w, img/christmas-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Husky wearing a red Santa hat in front of a decorated Christmas tree">
+        <div class="body">
+          <h3>Christmas pet portrait</h3>
+          <p>Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings. Show it wearing a small red Santa hat, sitting in front of a decorated Christmas tree with warm lights. Make it look like a real photograph with natural fur texture.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/HEhv1rR0iYA" rel="nofollow noopener" target="_blank">Alin Luna / Unsplash</a>. More holiday looks in the <a href="/guides/ai-christmas-photo/">AI Christmas photo guide</a>.</small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Keep it looking like your pet</h2>
+    <p>AI tends to turn every dog into a generic version of its breed. These details keep the portrait recognisable:</p>
+    <ul class="tips">
+      <li><b>Name the markings.</b> “White blaze on the nose”, “one brown ear”, “black spot over the left eye”. The prompt asks the AI to keep them, but naming them helps more.</li>
+      <li><b>Mention eye color and ear shape</b> if they are unusual for the breed.</li>
+      <li><b>Use one pet per photo</b> for single portraits. For two pets, pick a photo where both faces are clear.</li>
+      <li><b>Change one thing at a time.</b> Get the style right first, then ask for the costume or the frame.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Print it or give it as a gift</h2>
+    <ul class="tips">
+      <li><b>Square or 4:5 works for most frames.</b> Add “square format” or “vertical 4:5 format” to the prompt.</li>
+      <li><b>Download the largest version</b> the tool offers. For prints larger than 8×10 inches, run it through an image upscaler first.</li>
+      <li><b>Tick “Show it framed on a wall”</b> in the builder to preview how it looks in a gold frame before you order a print.</li>
+    </ul>
+  </section>
+
+  <aside class="funnel">
+    <img src="img/oil-480.webp" width="480" height="360" loading="lazy" alt="">
+    <div class="txt">
+      <h2>Saw a pet portrait style you love? Get its prompt.</h2>
+      <p>Image to Prompt is a Chrome extension. Right-click any painting or portrait on Pinterest, Etsy or a museum site and it writes a prompt that recreates the style, light and colors, ready to use with your own pet's photo.</p>
+      <a class="btn primary md" data-goal="cws_funnel" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=ai_pet_portrait" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </aside>
+
+  <section class="block">
+    <h2>Questions</h2>
+    <dl class="faq">
+      <dt>Which AI pet portrait generator should I use?</dt>
+      <dd>ChatGPT and Gemini both edit your own pet photos well. Upload the photo, paste a prompt from this page and send it. If one of them changes your pet's face or markings, try the same prompt in the other.</dd>
+      <dt>Does it work for cats and other pets?</dt>
+      <dd>Yes. The default prompts are written for an AI dog portrait; choose “My cat” in the builder and the prompt keeps the cat's face, eye color and coat pattern. For rabbits, birds and other pets, use the dog prompt and replace the word “dog”.</dd>
+      <dt>Can I be in the portrait with my dog?</dt>
+      <dd>Yes. Choose “Me and my pet” and upload one photo where both of you are visible. The prompt asks the AI to keep both faces.</dd>
+      <dt>How do I make a Renaissance pet portrait?</dt>
+      <dd>Pick the Renaissance noble style, upload your pet's photo and send the prompt. It dresses your pet in a velvet cloak and lace collar and paints it in the style of a 17th-century oil portrait.</dd>
+      <dt>Can I print an AI pet portrait?</dt>
+      <dd>Yes, for small and medium prints. Download the largest version and upscale it for anything bigger than 8×10 inches. Check the eyes and whiskers at full size before you order.</dd>
+    </dl>
+  </section>
+
+  <section class="block">
+    <h2>More guides</h2>
+    <div class="related">
+      <a href="/guides/">All guides</a>
+      <a href="/guides/ai-christmas-photo/">AI Christmas photo</a>
+      <a href="/">Turn any image into a prompt</a>
+    </div>
+    <p class="credits">Reference images on this page are real paintings, drawings and photos from Unsplash, including public-domain works from The Met, the Rijksmuseum and the Tartu Art Museum. They were not made with AI.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Image to Prompt</span>
+    <a href="/guides/">Guides</a>
+    <a href="/privacy/">Privacy</a>
+    <a class="right" href="/">imagetoprompt.online</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LOOKS = {
+    royal:{art:"painting", style:"Paint {subj} as {noble} in a 17th-century oil portrait: a dark velvet cloak, a white lace collar and a gold chain, posed in front of deep green drapery. Rich old-master oil painting with visible brushwork, warm candle-like light and a dark background."},
+    oil:{art:"painting", style:"Turn it into a classic 19th-century oil portrait of the head and shoulders, with soft, loose brushstrokes, natural fur texture and a plain warm-grey background. Calm, dignified expression."},
+    watercolor:{art:"watercolor", style:"Turn it into a loose watercolor portrait on textured white paper: soft washes, gentle color bleeds, fine detail around the eyes and nose, and unpainted paper around the edges."},
+    sketch:{art:"drawing", style:"Turn it into a detailed graphite pencil drawing on white paper, with fine hatching for the fur, strong shading around the eyes and a light, unfinished outline at the edges."},
+    studio:{style:"Turn it into a professional studio portrait in front of a seamless bright yellow backdrop, with soft even studio lighting and sharp focus on the eyes. Make it look like a real photograph with natural fur texture.", photo:true},
+    christmas:{style:"Show {subj} wearing {hat}, in front of a decorated Christmas tree with warm lights. Make it look like a real photograph with natural fur texture.", photo:true}
+  };
+  var WHO = {
+    dog:{keep:"Using the photo of my dog I uploaded, keep its exact breed, face shape, eye color, fur color and markings.", subj:"my dog", noble:"a noble", hat:"a small red Santa hat"},
+    cat:{keep:"Using the photo of my cat I uploaded, keep its exact face shape, eye color, coat color and pattern.", subj:"my cat", noble:"a noble", hat:"a small red Santa hat"},
+    two:{keep:"Using the photo I uploaded, keep both of my pets exactly as they are: breed, face shape, eye color, fur color and markings. Keep exactly two animals.", subj:"both pets", noble:"two nobles", hat:"small red Santa hats"},
+    owner:{keep:"Using the photo I uploaded, keep my exact face, facial features, skin tone and age, and keep my pet's exact breed, face shape, eye color, fur color and markings.", subj:"me and my pet", noble:"a noble and a loyal companion", hat:"matching Santa hats"}
+  };
+  var TARGET = {chatgpt:"ChatGPT", gemini:"Gemini"};
+
+  var form = document.getElementById("form"), out = document.getElementById("out"),
+      open = document.getElementById("open"), status = document.getElementById("status"),
+      frame = document.getElementById("frame"), plaque = document.getElementById("name"),
+      petname = document.getElementById("petname");
+
+  function val(n){ var el = form.querySelector('input[name="'+n+'"]:checked'); return el ? el.value : null; }
+
+  function build(){
+    var L = LOOKS[val("look")], W = WHO[val("who")], t = val("target");
+    petname.disabled = !plaque.checked;
+    var style = L.style.replace("{subj}", W.subj).replace("{noble}", W.noble).replace("{hat}", W.hat);
+    style = style.charAt(0).toUpperCase() + style.slice(1);
+    if (val("who") === "owner") style = style.replace("natural fur texture", "natural skin and fur texture");
+    var text = (t === "gemini" ? "Edit this photo. " : "") + W.keep + " " + style;
+    if (frame.checked){
+      text += L.photo ? " Print it and show it in a simple frame hanging on a living-room wall."
+                      : " Show the finished " + L.art + " in an ornate gold frame hanging on a wall.";
+    }
+    if (plaque.checked && petname.value.trim()){
+      text += " Add a small brass name plaque under the portrait that reads “" + petname.value.trim() + "”, spelled exactly as written.";
+    }
+    out.textContent = text;
+    if (t === "gemini"){ open.href = "https://gemini.google.com/app"; open.textContent = "Open Gemini"; }
+    else { open.href = "https://chatgpt.com/?q=" + encodeURIComponent(text); open.textContent = "Open ChatGPT"; }
+    status.textContent = "";
+  }
+  form.addEventListener("change", build);
+  petname.addEventListener("input", build);
+  build();
+
+  function goal(name){ try { if (window.ym) ym(111860198, "reachGoal", name); } catch(e){} }
+  function copy(text, done){
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+      .then(done, function(){
+        var ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand("copy"); done(); } catch(e){} ta.remove();
+      });
+  }
+  document.getElementById("copy").addEventListener("click", function(){
+    copy(out.textContent, function(){
+      status.textContent = "Copied. Now attach your pet's photo in " + TARGET[val("target")] + " and paste.";
+      goal("prompt_copy_builder");
+    });
+  });
+  open.addEventListener("click", function(){ goal("open_" + val("target")); });
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      copy(b.parentNode.querySelector("p").textContent, function(){
+        b.textContent = "Copied"; setTimeout(function(){ b.textContent = "Copy"; }, 1800);
+        goal("prompt_copy_card");
+      });
+    });
+  });
+  document.querySelectorAll("[data-goal]").forEach(function(a){
+    a.addEventListener("click", function(){ goal(a.getAttribute("data-goal")); });
+  });
+})();
+</script>
+</body>
+</html>

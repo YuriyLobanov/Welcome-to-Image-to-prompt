@@ -188,7 +188,11 @@
   }
   @media(max-width:560px){
     .wrap{padding:0 16px}
-    .topnav{display:none}
+    .bar{gap:14px}
+    .brand img{width:26px;height:26px}
+    .brand b{font-size:15.5px;white-space:nowrap}
+    .topnav a{font-size:13.5px}
+    .topnav .nav-extra{display:none}
     .btn.sm .xt{display:none}
     .builder{padding:18px 14px;border-radius:12px;margin-top:32px}
     .looks{grid-template-columns:repeat(2,1fr);gap:10px}
@@ -224,7 +228,7 @@
       <img src="/icon128.png" alt="Image to Prompt logo" width="30" height="30">
       <b>Image to prompt</b>
     </a>
-    <nav class="topnav"><a href="/guides/">Guides</a><a href="/welcome/">How to use</a></nav>
+    <nav class="topnav"><a href="/guides/">Guides</a><a class="nav-extra" href="/welcome/">How to use</a></nav>
     <a class="btn primary sm" data-goal="cws_header" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guides_hub&amp;utm_campaign=guides" target="_blank" rel="noopener">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
       Install<span class="xt">&nbsp;the extension</span>
@@ -245,6 +249,13 @@
           <p>Turn your own photo into a Christmas card, a photo with Santa or a snowy portrait with ChatGPT and Gemini prompts.</p>
         </div>
       </article>
+      <article class="pcard">
+        <a href="/guides/ai-pet-portrait/"><img src="/guides/ai-pet-portrait/img/hero-480.webp" srcset="/guides/ai-pet-portrait/img/hero-480.webp 480w, /guides/ai-pet-portrait/img/hero-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Golden retriever looking into the camera against a blue studio backdrop"></a>
+        <div class="body">
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-size:19px"><a href="/guides/ai-pet-portrait/" style="color:inherit;text-decoration:none">AI pet portrait generator</a></h2>
+          <p>Turn a photo of your dog or cat into a Renaissance portrait, an oil painting, a watercolor or a pencil sketch with ChatGPT and Gemini prompts.</p>
+        </div>
+      </article>
     </div>
   </section>
 </main>
@@ -252,6 +263,7 @@
 <footer>
   <div class="wrap foot">
     <span>© 2026 Image to Prompt</span>
+    <a href="/guides/">Guides</a>
     <a href="/privacy/">Privacy</a>
     <a class="right" href="/">imagetoprompt.online</a>
   </div>

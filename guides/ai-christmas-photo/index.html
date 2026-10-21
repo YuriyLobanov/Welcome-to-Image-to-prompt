@@ -230,7 +230,11 @@
   }
   @media(max-width:560px){
     .wrap{padding:0 16px}
-    .topnav{display:none}
+    .bar{gap:14px}
+    .brand img{width:26px;height:26px}
+    .brand b{font-size:15.5px;white-space:nowrap}
+    .topnav a{font-size:13.5px}
+    .topnav .nav-extra{display:none}
     .btn.sm .xt{display:none}
     .builder{padding:18px 14px;border-radius:12px;margin-top:32px}
     .looks{grid-template-columns:repeat(2,1fr);gap:10px}
@@ -266,7 +270,7 @@
       <img src="/icon128.png" alt="Image to Prompt logo" width="30" height="30">
       <b>Image to prompt</b>
     </a>
-    <nav class="topnav"><a href="/guides/">Guides</a><a href="/welcome/">How to use</a></nav>
+    <nav class="topnav"><a href="/guides/">Guides</a><a class="nav-extra" href="/welcome/">How to use</a></nav>
     <a class="btn primary sm" data-goal="cws_header" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=ai_christmas_photo" target="_blank" rel="noopener">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
       Install<span class="xt">&nbsp;the extension</span>
@@ -455,7 +459,7 @@
       <dt>How do I keep everyone's faces the same?</dt>
       <dd>Use one sharp photo where every face is visible and well lit, keep the sentence that asks the AI to preserve exact faces, and ask it not to add or remove people. If a face drifts, reply “keep the faces identical to my photo” in the same chat.</dd>
       <dt>Can I put my dog or cat in a Christmas photo?</dt>
-      <dd>Yes. Choose the pet look, or pick “Me and my pet” and upload one photo where both of you are visible.</dd>
+      <dd>Yes. Choose the pet look, or pick “Me and my pet” and upload one photo where both of you are visible. For painted styles, see the <a href="/guides/ai-pet-portrait/">AI pet portrait guide</a>.</dd>
       <dt>Is it safe to upload family photos?</dt>
       <dd>Your photo goes to the AI service you choose, not to this site. Check that service's privacy settings, and ask the people in the photo before you upload it.</dd>
     </dl>
@@ -465,6 +469,7 @@
     <h2>More guides</h2>
     <div class="related">
       <a href="/guides/">All guides</a>
+      <a href="/guides/ai-pet-portrait/">AI pet portrait</a>
       <a href="/">Turn any image into a prompt</a>
       <a href="/welcome/">How the extension works</a>
     </div>
@@ -475,6 +480,7 @@
 <footer>
   <div class="wrap foot">
     <span>© 2026 Image to Prompt</span>
+    <a href="/guides/">Guides</a>
     <a href="/privacy/">Privacy</a>
     <a class="right" href="/">imagetoprompt.online</a>
   </div>
