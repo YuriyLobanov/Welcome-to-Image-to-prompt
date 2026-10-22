@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c1c24">
+<title>How to Change the Background of a Photo with AI</title>
+<meta name="description" content="Change the background of a photo in ChatGPT or Gemini. Pick a background, copy the prompt and keep hair edges, light and shadows natural. People, products, pets.">
+<link rel="canonical" href="https://imagetoprompt.online/guides/change-photo-background/">
+<link rel="icon" type="image/png" href="/icon128.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Change the Background of a Photo with AI">
+<meta property="og:description" content="Pick a new background, copy the prompt and run it in ChatGPT or Gemini: studio, pure white, office, city, beach or forest.">
+<meta property="og:url" content="https://imagetoprompt.online/guides/change-photo-background/">
+<meta property="og:image" content="https://imagetoprompt.online/guides/change-photo-background/img/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Young man in a grey turtleneck against a dark green studio backdrop">
+<meta property="og:site_name" content="Image to Prompt">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-10-22">
+<meta property="article:modified_time" content="2026-10-22">
+<link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w" imagesizes="(max-width: 860px) 100vw, 520px" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to Change the Background of a Photo with AI",
+   "description": "A prompt builder and ready-to-copy prompts for changing the background of a photo in ChatGPT or Gemini.",
+   "image": "https://imagetoprompt.online/guides/change-photo-background/img/og-1200x630.jpg",
+   "datePublished": "2026-10-22",
+   "dateModified": "2026-10-22",
+   "mainEntityOfPage": "https://imagetoprompt.online/guides/change-photo-background/",
+   "author": {
+    "@type": "Organization",
+    "name": "Image to Prompt",
+    "url": "https://imagetoprompt.online/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Image to Prompt",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://imagetoprompt.online/icon128.png"
+    }
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Image to Prompt",
+     "item": "https://imagetoprompt.online/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://imagetoprompt.online/guides/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Change photo background",
+     "item": "https://imagetoprompt.online/guides/change-photo-background/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can ChatGPT change the background of a photo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Upload the photo, paste a prompt that asks it to replace only the background and keep the subject unchanged, and send it. ChatGPT returns a new image with the new background."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can Gemini change the background of a photo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Gemini's image model (Nano Banana) edits uploaded photos. Start the prompt with “Edit this photo” so it changes your photo instead of creating a new one."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I make the background of a photo white?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Choose “Pure white” in the builder. The prompt asks for a #FFFFFF background with no gradient and a soft shadow under the subject, which is what most online stores expect."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will the AI change my face?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It can, slightly. The prompts on this page ask the AI to keep your face, hair and clothing exactly as they are. If something changes, reply “keep my face identical to the original photo” in the same chat."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I just blur the background instead of replacing it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Tick “Blur the new background”, or ask for “the same background, softly out of focus, like a portrait lens”."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#1c1c24;
+    --bg-deep:#13131a;
+    --surface:#232330;
+    --line:#2c2c38;
+    --line-soft:#26262f;
+    --ink:#eaeaf2;
+    --ink-mid:#d6d6e2;
+    --ink-soft:#9a9aaf;
+    --ink-dim:#7a7a8c;
+    --accent:#6c8cff;
+    --r:8px;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+
+  /* header — same as the landing */
+  header{padding:18px 0}
+  .bar{display:flex;align-items:center;gap:26px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+  .brand img{width:30px;height:30px;border-radius:7px}
+  .brand b{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;font-weight:700}
+  .topnav{display:flex;gap:20px}
+  .topnav a{color:var(--ink-soft);text-decoration:none;font-size:14.5px;font-weight:600}
+  .topnav a:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+       border-radius:var(--r);font-weight:700;font-family:inherit;border:none;font-size:15px;
+       text-decoration:none;white-space:nowrap;cursor:pointer;
+       transition:transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s ease, background .18s ease}
+  .btn.primary{background:linear-gradient(180deg,#7d99ff,var(--accent));color:#fff;
+               box-shadow:0 6px 18px rgba(108,140,255,.30), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(108,140,255,.45)}
+  .btn.ghost{background:transparent;color:var(--ink-mid);border:1px solid #3a3a4a}
+  .btn.ghost:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .btn.sm{padding:9px 16px;font-size:13.5px}
+  .btn.md{padding:12px 20px}
+
+  .crumbs{font-size:13px;color:var(--ink-dim);padding-top:6px}
+  .crumbs a{color:var(--ink-soft);text-decoration:none}
+  .crumbs a:hover{color:var(--ink)}
+
+  /* ---------- intro + hero photo ---------- */
+  .intro{display:grid;grid-template-columns:1fr minmax(0,520px);gap:40px;align-items:center;padding:20px 0 10px}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+     font-size:clamp(32px,4.6vw,50px);line-height:1.05;letter-spacing:-.8px}
+  .answer{margin-top:16px;font-size:17.5px;color:var(--ink-mid);max-width:58ch}
+  .meta{margin-top:12px;font-size:13px;color:var(--ink-dim)}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;
+                  box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .credit{font-size:12px;color:var(--ink-dim);margin-top:8px}
+  .credit a{color:var(--ink-soft)}
+
+  /* ---------- builder ---------- */
+  .builder{margin:44px 0 10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .builder > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(23px,2.8vw,28px);font-weight:700}
+  .builder .hint{font-size:14.5px;color:var(--ink-soft);margin:4px 0 20px}
+  fieldset{border:none;margin-bottom:20px;min-width:0}
+  legend{font-size:14px;font-weight:700;color:var(--ink-mid);margin-bottom:10px}
+
+  /* the look picker: real photos as radio buttons */
+  .looks{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .look{position:relative;cursor:pointer}
+  .look input{position:absolute;opacity:0;inset:0;cursor:pointer;z-index:1}
+  .look img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;
+            border:2px solid transparent;transition:border-color .15s, transform .15s}
+  .look span{display:block;font-size:13.5px;font-weight:600;color:var(--ink-soft);margin-top:7px;line-height:1.3}
+  .look input:checked ~ img{border-color:var(--accent)}
+  .look input:checked ~ span{color:#fff}
+  .look input:focus-visible ~ img{outline:2px solid var(--accent);outline-offset:2px}
+  .look:hover img{transform:translateY(-2px)}
+
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative}
+  .chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .chip span{display:block;padding:7px 13px;border-radius:999px;border:1px solid #3a3a4a;
+             font-size:14px;font-weight:600;color:var(--ink-soft);background:var(--bg-deep);
+             transition:border-color .15s, color .15s, background .15s}
+  .chip input:checked + span{border-color:var(--accent);color:#fff;background:rgba(108,140,255,.16)}
+  .chip input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+  .chip input:disabled + span{opacity:.4}
+
+  .card-opt{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+  .toggle{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--ink-mid);cursor:pointer}
+  .toggle input{width:18px;height:18px;accent-color:var(--accent)}
+  .card-opt input[type=text]{flex:1 1 240px;background:var(--bg-deep);border:1px solid #3a3a4a;border-radius:var(--r);
+             color:var(--ink);font:inherit;font-size:14.5px;padding:9px 12px}
+  .card-opt input[type=text]:disabled{opacity:.45}
+
+  .out{background:var(--bg-deep);border:1px solid var(--line);border-radius:var(--r);
+       padding:14px;font-size:14.5px;line-height:1.62;color:var(--ink-mid);min-height:110px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .status{font-size:13px;color:var(--ink-soft);margin-top:8px;min-height:1.2em}
+
+  /* ---------- article ---------- */
+  section.block{padding:48px 0 4px}
+  section.block > h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(24px,3vw,30px);
+                     font-weight:700;letter-spacing:-.3px;margin-bottom:12px;max-width:760px}
+  section.block > p{color:var(--ink-mid);margin-bottom:12px;max-width:68ch}
+  ol.steps,ul.tips{padding-left:22px;color:var(--ink-mid);max-width:68ch}
+  ol.steps li,ul.tips li{margin-bottom:9px;padding-left:4px}
+  ol.steps b,ul.tips b{color:var(--ink)}
+
+  .prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:6px}
+  .pcard{background:#212129;border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;
+         display:flex;flex-direction:column}
+  .pcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .pcard .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .pcard h3{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;font-weight:700}
+  .pcard p{font-size:14px;line-height:1.6;color:var(--ink-soft);flex:1}
+  .pcard small{font-size:11.5px;color:var(--ink-dim)}
+  .pcard small a{color:var(--ink-dim)}
+  .pcard button{align-self:flex-start}
+
+  .funnel{margin:56px 0 6px;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+          background:#202029;display:grid;grid-template-columns:260px 1fr;align-items:stretch}
+  .funnel img{width:100%;height:100%;object-fit:cover}
+  .funnel .txt{padding:26px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  .funnel h2{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;font-weight:700}
+  .funnel p{color:var(--ink-mid);max-width:60ch}
+  .funnel .btn{align-self:flex-start}
+
+  dl.faq{max-width:72ch}
+  dl.faq dt{font-weight:700;color:var(--ink);margin-top:18px}
+  dl.faq dd{color:var(--ink-mid);margin-top:4px}
+
+  .related{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .related a{font-size:14.5px;font-weight:600;color:var(--ink-mid);text-decoration:none;
+             border:1px solid #3a3a4a;border-radius:999px;padding:7px 14px}
+  .related a:hover{border-color:var(--ink-soft);color:var(--ink)}
+  .credits{font-size:12.5px;color:var(--ink-dim);max-width:80ch;margin-top:26px}
+  .credits a{color:var(--ink-soft)}
+
+  footer{border-top:1px solid var(--line-soft);padding:20px 0 26px;margin-top:48px}
+  .foot{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--ink-dim);flex-wrap:wrap}
+  .foot a{color:var(--ink-soft);text-decoration:none;font-weight:600}
+  .foot a:hover{color:var(--ink)}
+  .foot .right{margin-left:auto}
+
+  @media(max-width:980px){
+    .looks{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:860px){
+    .intro{grid-template-columns:1fr;gap:26px}
+    .row{grid-template-columns:1fr}
+    .funnel{grid-template-columns:1fr}
+    .funnel img{aspect-ratio:16/9;height:auto}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 16px}
+    .bar{gap:14px}
+    .brand img{width:26px;height:26px}
+    .brand b{font-size:15.5px;white-space:nowrap}
+    .topnav a{font-size:13.5px}
+    .topnav .nav-extra{display:none}
+    .btn.sm .xt{display:none}
+    .builder{padding:18px 14px;border-radius:12px;margin-top:32px}
+    .looks{grid-template-columns:repeat(2,1fr);gap:10px}
+    .actions .btn{flex:1 1 100%}
+    .prompts{grid-template-columns:1fr}
+    .funnel .txt{padding:20px}
+    .funnel .btn{align-self:stretch}
+    .foot{flex-direction:column;gap:7px;text-align:center}
+    .foot .right{margin:0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .btn,.look img,.chip span{transition:none}
+    .btn.primary:hover,.look:hover img{transform:none}
+  }
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(111860198, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111860198" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<header class="wrap">
+  <div class="bar">
+    <a class="brand" href="/">
+      <img src="/icon128.png" alt="Image to Prompt logo" width="30" height="30">
+      <b>Image to prompt</b>
+    </a>
+    <nav class="topnav"><a href="/guides/">Guides</a><a class="nav-extra" href="/welcome/">How to use</a></nav>
+    <a class="btn primary sm" data-goal="cws_header" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=change_photo_background" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+      Install<span class="xt">&nbsp;the extension</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Image to Prompt</a> / <a href="/guides/">Guides</a> / <span aria-current="page">Change photo background</span>
+  </nav>
+
+  <div class="intro">
+    <div>
+      <h1>How to change the background of a photo with AI</h1>
+      <p class="answer">Upload your photo to ChatGPT or Gemini and ask it to replace only the background, keeping the person or product, the hair edges and the lighting exactly as they are. Pick a new background below and copy a prompt that says all of that for you.</p>
+      <p class="meta">Updated <time datetime="2026-10-22">October 22, 2026</time> · Works with ChatGPT and Gemini (Nano Banana)</p>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/hero-800.webp" srcset="img/hero-480.webp 480w, img/hero-800.webp 800w, img/hero-1200.webp 1200w"
+           sizes="(max-width: 860px) 100vw, 520px" width="1200" height="900" fetchpriority="high"
+           alt="Young man in a grey turtleneck posing against a dark green studio backdrop">
+      <figcaption class="credit">The same portrait can sit on a studio wall, in an office or on a beach. Photo: <a href="https://unsplash.com/photos/SsS0s6D38OQ" rel="nofollow noopener" target="_blank">McFollis / Unsplash</a></figcaption>
+    </figure>
+  </div>
+
+  <form class="builder" id="form" onsubmit="return false">
+    <h2>Build your background prompt</h2>
+    <p class="hint">Choose the new background and what is in your photo. The prompt updates as you click.</p>
+
+    <fieldset>
+      <legend>New background</legend>
+      <div class="looks">
+        <label class="look"><input type="radio" name="look" value="studio" checked><img src="img/studio-480.webp" width="480" height="360" alt="" loading="lazy"><span>Light studio</span></label>
+        <label class="look"><input type="radio" name="look" value="white"><img src="img/white-480.webp" width="480" height="360" alt="" loading="lazy"><span>Pure white</span></label>
+        <label class="look"><input type="radio" name="look" value="office"><img src="img/office-480.webp" width="480" height="360" alt="" loading="lazy"><span>Office</span></label>
+        <label class="look"><input type="radio" name="look" value="city"><img src="img/city-480.webp" width="480" height="360" alt="" loading="lazy"><span>City street</span></label>
+        <label class="look"><input type="radio" name="look" value="beach"><img src="img/beach-480.webp" width="480" height="360" alt="" loading="lazy"><span>Beach at sunset</span></label>
+        <label class="look"><input type="radio" name="look" value="nature"><img src="img/nature-480.webp" width="480" height="360" alt="" loading="lazy"><span>Forest</span></label>
+      </div>
+    </fieldset>
+
+    <div class="row">
+      <fieldset>
+        <legend>What is in your photo</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="who" value="person" checked><span>A person</span></label>
+          <label class="chip"><input type="radio" name="who" value="group"><span>A group</span></label>
+          <label class="chip"><input type="radio" name="who" value="product"><span>A product</span></label>
+          <label class="chip"><input type="radio" name="who" value="pet"><span>A pet</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>For</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="target" value="chatgpt" checked><span>ChatGPT</span></label>
+          <label class="chip"><input type="radio" name="target" value="gemini"><span>Gemini</span></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <fieldset>
+      <legend>Options</legend>
+      <div class="card-opt">
+        <label class="toggle"><input type="checkbox" id="blur"> Blur the new background</label>
+        <label class="toggle"><input type="checkbox" id="shadow" checked> Add a natural shadow</label>
+      </div>
+    </fieldset>
+
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button class="btn primary md" type="button" id="copy">Copy prompt</button>
+      <a class="btn ghost md" id="open" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </form>
+
+  <section class="block">
+    <h2>How to change the background of a photo, step by step</h2>
+    <ol class="steps">
+      <li><b>Start with a sharp photo.</b> The subject should be in focus and not cut off at the edges. Busy or blurry backgrounds are fine; the AI replaces them.</li>
+      <li><b>Open ChatGPT or Gemini</b> and attach the photo with the + button.</li>
+      <li><b>Paste your prompt</b> from the builder and send it.</li>
+      <li><b>Check the edges.</b> Look at hair, glasses, fingers and the outline of the product. If something looks cut out, reply “blend the edges of the hair more naturally”.</li>
+      <li><b>Check the light.</b> If the subject looks pasted in, reply “match the light on me to the new background”.</li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Six background prompts to copy</h2>
+    <p>Each prompt is written for a photo of one person, except the white background, which is written for a product. The builder above adapts any of them for groups, products and pets. The photos below are real reference photos, not AI results.</p>
+    <div class="prompts">
+      <article class="pcard">
+        <img src="img/studio-480.webp" srcset="img/studio-480.webp 480w, img/studio-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Woman in glasses and a black vest posing against a plain light grey studio backdrop">
+        <div class="body">
+          <h3>Light studio background</h3>
+          <p>Replace only the background of the photo I uploaded. Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair. New background: a seamless light grey studio backdrop with a soft gradient, like a professional portrait session. Even, soft studio light on me that matches the backdrop, and a soft natural shadow behind me. Keep the same framing and image size. Make it look like a real photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/_mLkvtEJsao" rel="nofollow noopener" target="_blank">Thanh Duc PHAN / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/white-480.webp" srcset="img/white-480.webp 480w, img/white-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Plain white ceramic mug on a white background">
+        <div class="body">
+          <h3>Pure white background for products</h3>
+          <p>Replace only the background of the photo I uploaded. Keep the product exactly as it is: shape, colors, materials, label text and logo, with no changes. New background: pure white (#FFFFFF), with no texture or gradient. Center the product, keep it sharp and add a soft, subtle shadow directly beneath it. Keep the same framing and image size. Make it look like a real product photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/TnE314evYY0" rel="nofollow noopener" target="_blank">Giorgio Trovato / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/office-480.webp" srcset="img/office-480.webp 480w, img/office-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Smiling woman in a navy blazer leaning on a wall in a bright office with desks and large windows">
+        <div class="body">
+          <h3>Office background</h3>
+          <p>Replace only the background of the photo I uploaded. Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair. New background: a bright, modern office with large windows, desks and plants, slightly out of focus. Soft daylight from the windows that matches the light on me, and a soft natural shadow where I stand. Keep the same framing and image size. Make it look like a real photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/NpyF7rjqmq4" rel="nofollow noopener" target="_blank">LinkedIn Sales Solutions / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/city-480.webp" srcset="img/city-480.webp 480w, img/city-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Young man in a black coat standing on a city sidewalk on an overcast day, street and cars behind him">
+        <div class="body">
+          <h3>City street background</h3>
+          <p>Replace only the background of the photo I uploaded. Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair. New background: a city street with buildings, parked cars and street lamps on an overcast day. Soft, cool daylight that matches the light on me, the horizon at the right height for my camera angle, and a soft natural shadow on the sidewalk. Keep the same framing and image size. Make it look like a real photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/P07zY_IAwYc" rel="nofollow noopener" target="_blank">Adrian “Rosco” Stef / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/beach-480.webp" srcset="img/beach-480.webp 480w, img/beach-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Woman with curly hair in profile in front of the sea glowing orange at sunset">
+        <div class="body">
+          <h3>Beach at sunset</h3>
+          <p>Replace only the background of the photo I uploaded. Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair. New background: a calm sea at sunset with a warm orange sky. Warm golden light on me from the direction of the sun, with a soft rim light on my hair. Keep the same framing and image size. Make it look like a real photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/daAQRPq5ts4" rel="nofollow noopener" target="_blank">Pooria Shahriari / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+      <article class="pcard">
+        <img src="img/nature-480.webp" srcset="img/nature-480.webp 480w, img/nature-800.webp 800w" sizes="(max-width: 560px) 100vw, 340px" width="800" height="600" loading="lazy" alt="Woman with a backpack standing on a path in a green forest">
+        <div class="body">
+          <h3>Forest background</h3>
+          <p>Replace only the background of the photo I uploaded. Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair. New background: a green forest path with tall trees, softly out of focus. Soft, diffused daylight with a slight green tint that matches the light on me, and a soft natural shadow on the path. Keep the same framing and image size. Make it look like a real photograph, not a cut-out.</p>
+          <small>Reference: <a href="https://unsplash.com/photos/5vw16uKesQw" rel="nofollow noopener" target="_blank">Alex Gagareen / Unsplash</a></small>
+          <button class="btn ghost sm" type="button" data-copy>Copy</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Why some AI background changes look fake</h2>
+    <p>An AI background changer swaps the pixels behind you in seconds. What gives it away is everything around the edges. Ask for these four things and the result looks like one photo, not two:</p>
+    <ul class="tips">
+      <li><b>Matching light.</b> Sunset light is warm and low; office light is soft and cool. If your face is lit from the left, the new scene should be too.</li>
+      <li><b>A shadow on the ground.</b> A person or product with no shadow looks like it is floating.</li>
+      <li><b>The right horizon.</b> A photo taken from below needs a background seen from below. Mention “the horizon at the right height for my camera angle”.</li>
+      <li><b>Soft hair edges.</b> Flyaway hair, glasses and fur are where cut-outs fail. Always ask the AI to keep “the edges of my hair”.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Change the background of a product photo</h2>
+    <p>For online stores, choose “A product” and “Pure white” in the builder. Marketplaces such as Amazon ask for a pure white background on the main product image, so the prompt asks for #FFFFFF with no gradient.</p>
+    <ul class="tips">
+      <li><b>Check the label and logo</b> letter by letter. AI models sometimes redraw small text; if they do, reply “keep the label text exactly as in my photo”.</li>
+      <li><b>Keep reflections honest.</b> Glass and metal reflect their surroundings; ask for “neutral studio reflections” after the change.</li>
+      <li><b>Use the same prompt for every product</b> so your whole catalog has matching light and shadows.</li>
+    </ul>
+  </section>
+
+  <aside class="funnel">
+    <img src="img/beach-480.webp" width="480" height="360" loading="lazy" alt="">
+    <div class="txt">
+      <h2>Saw a background you love? Get its prompt.</h2>
+      <p>Image to Prompt is a Chrome extension. Right-click any photo on Pinterest, Instagram or a travel site and it describes the scene, light and colors as a prompt, ready to drop into the background line of your own edit.</p>
+      <a class="btn primary md" data-goal="cws_funnel" href="https://chromewebstore.google.com/detail/objmjkdopmkfmhdnblknhgklkpcpbahg?utm_source=imagetoprompt.online&amp;utm_medium=guide&amp;utm_campaign=change_photo_background" target="_blank" rel="noopener">Add to Chrome</a>
+    </div>
+  </aside>
+
+  <section class="block">
+    <h2>Questions</h2>
+    <dl class="faq">
+      <dt>Can ChatGPT change the background of a photo?</dt>
+      <dd>Yes. Upload the photo, paste a prompt that asks it to replace only the background and keep the subject unchanged, and send it. ChatGPT returns a new image with the new background.</dd>
+      <dt>Can Gemini change the background of a photo?</dt>
+      <dd>Yes. Gemini's image model (Nano Banana) edits uploaded photos. Start the prompt with “Edit this photo” so it changes your photo instead of creating a new one.</dd>
+      <dt>How do I make the background of a photo white?</dt>
+      <dd>Choose “Pure white” in the builder. The prompt asks for a #FFFFFF background with no gradient and a soft shadow under the subject, which is what most online stores expect.</dd>
+      <dt>Will the AI change my face?</dt>
+      <dd>It can, slightly. The prompts on this page ask the AI to keep your face, hair and clothing exactly as they are. If something changes, reply “keep my face identical to the original photo” in the same chat.</dd>
+      <dt>Can I just blur the background instead of replacing it?</dt>
+      <dd>Yes. Tick “Blur the new background”, or ask for “the same background, softly out of focus, like a portrait lens”.</dd>
+    </dl>
+  </section>
+
+  <section class="block">
+    <h2>More guides</h2>
+    <div class="related">
+      <a href="/guides/">All guides</a>
+      <a href="/guides/ai-pet-portrait/">AI pet portrait</a>
+      <a href="/guides/ai-christmas-photo/">AI Christmas photo</a>
+    </div>
+    <p class="credits">Photos on this page are real reference photos from Unsplash, used under the Unsplash License, to show each background. They were not made with AI.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Image to Prompt</span>
+    <a href="/guides/">Guides</a>
+    <a href="/privacy/">Privacy</a>
+    <a class="right" href="/">imagetoprompt.online</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LOOKS = {
+    studio:{bg:"a seamless light grey studio backdrop with a soft gradient, like a professional portrait session", light:"Even, soft studio light on {on} that matches the backdrop"},
+    white:{bg:"pure white (#FFFFFF), with no texture or gradient", light:"Bright, even light on {on}"},
+    office:{bg:"a bright, modern office with large windows, desks and plants, slightly out of focus", light:"Soft daylight from the windows that matches the light on {on}"},
+    city:{bg:"a city street with buildings, parked cars and street lamps on an overcast day", light:"Soft, cool daylight that matches the light on {on}, with the horizon at the right height for the camera angle"},
+    beach:{bg:"a calm sea at sunset with a warm orange sky", light:"Warm golden light on {on} from the direction of the sun, with a soft rim light on the edges"},
+    nature:{bg:"a green forest path with tall trees", light:"Soft, diffused daylight with a slight green tint that matches the light on {on}"}
+  };
+  var WHO = {
+    person:{keep:"Keep me exactly as I am: face, expression, hair, clothing, pose and the edges of my hair.", on:"me", ground:"where I stand"},
+    group:{keep:"Keep everyone exactly as they are: faces, expressions, hair, clothing and poses. Keep the same number of people.", on:"everyone", ground:"where everyone stands"},
+    product:{keep:"Keep the product exactly as it is: shape, colors, materials, label text and logo, with no changes.", on:"the product", ground:"under the product"},
+    pet:{keep:"Keep my pet exactly as it is: breed, face, fur color, markings and the edges of its fur.", on:"my pet", ground:"where my pet stands"}
+  };
+  var TARGET = {chatgpt:"ChatGPT", gemini:"Gemini"};
+
+  var form = document.getElementById("form"), out = document.getElementById("out"),
+      open = document.getElementById("open"), status = document.getElementById("status"),
+      blur = document.getElementById("blur"), shadow = document.getElementById("shadow");
+
+  function val(n){ var el = form.querySelector('input[name="'+n+'"]:checked'); return el ? el.value : null; }
+
+  function build(){
+    var look = val("look"), who = val("who"), L = LOOKS[look], W = WHO[who], t = val("target");
+    var isProduct = who === "product";
+    var text = (t === "gemini" ? "Edit this photo. " : "") +
+      "Replace only the background of the photo I uploaded. " + W.keep + " " +
+      "New background: " + L.bg + (blur.checked && look !== "white" ? ", softly out of focus like a portrait lens" : "") + ". " +
+      L.light.replace("{on}", W.on) + ".";
+    if (shadow.checked){
+      text += look === "white" ? " Add a soft, subtle shadow directly beneath " + W.on + "."
+                               : " Add a soft natural shadow " + W.ground + ".";
+    }
+    if (isProduct && look === "white") text += " Center the product and keep it sharp.";
+    text += " Keep the same framing and image size. Make it look like a real " + (isProduct ? "product photograph" : "photograph") + ", not a cut-out.";
+    out.textContent = text;
+    if (t === "gemini"){ open.href = "https://gemini.google.com/app"; open.textContent = "Open Gemini"; }
+    else { open.href = "https://chatgpt.com/?q=" + encodeURIComponent(text); open.textContent = "Open ChatGPT"; }
+    status.textContent = "";
+  }
+  form.addEventListener("change", build);
+  build();
+
+  function goal(name){ try { if (window.ym) ym(111860198, "reachGoal", name); } catch(e){} }
+  function copy(text, done){
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+      .then(done, function(){
+        var ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+        ta.select(); try { document.execCommand("copy"); done(); } catch(e){} ta.remove();
+      });
+  }
+  document.getElementById("copy").addEventListener("click", function(){
+    copy(out.textContent, function(){
+      status.textContent = "Copied. Now attach your photo in " + TARGET[val("target")] + " and paste.";
+      goal("prompt_copy_builder");
+    });
+  });
+  open.addEventListener("click", function(){ goal("open_" + val("target")); });
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    b.addEventListener("click", function(){
+      copy(b.parentNode.querySelector("p").textContent, function(){
+        b.textContent = "Copied"; setTimeout(function(){ b.textContent = "Copy"; }, 1800);
+        goal("prompt_copy_card");
+      });
+    });
+  });
+  document.querySelectorAll("[data-goal]").forEach(function(a){
+    a.addEventListener("click", function(){ goal(a.getAttribute("data-goal")); });
+  });
+})();
+</script>
+</body>
+</html>

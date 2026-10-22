@@ -29,6 +29,7 @@ Key facts:
 - [Guides](https://imagetoprompt.online/guides/): practical guides to AI images and prompts.
 - [AI Christmas photo generator](https://imagetoprompt.online/guides/ai-christmas-photo/): prompts and a prompt builder for turning your own photo into a Christmas photo or card in ChatGPT or Gemini (family card, photo with Santa, matching pajamas, snowy outdoors, pet in a Santa hat).
 - [AI pet portrait generator](https://imagetoprompt.online/guides/ai-pet-portrait/): prompts and a prompt builder for turning a photo of a dog or cat into a portrait in ChatGPT or Gemini (Renaissance noble, classic oil painting, watercolor, pencil sketch, color studio photo, Christmas portrait).
+- [How to change the background of a photo with AI](https://imagetoprompt.online/guides/change-photo-background/): prompts and a prompt builder for replacing a photo background in ChatGPT or Gemini (light studio, pure white for products, office, city street, beach at sunset, forest), with tips for natural light, shadows and hair edges.
 
 ## Common questions
 
